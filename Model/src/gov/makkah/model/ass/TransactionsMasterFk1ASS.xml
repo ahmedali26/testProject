@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TransactionsMasterFk1ASS"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="ContractsInfo"
+    Cardinality="1"
+    Source="true"
+    Owner="gov.makkah.model.eo.ContractsInfoEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="ContractsInfo"/>
+      <Attr Name="_foreignKey" Value="gov.makkah.model.eo.ContractsInfoEO.ContractsInfoPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.ContractsInfoEO.ContractId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="TransactionsMaster"
+    Cardinality="-1"
+    Owner="gov.makkah.model.eo.TransactionsMasterEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="TransactionsMaster"/>
+      <Attr Name="_foreignKey" Value="gov.makkah.model.eo.TransactionsMasterEO.TransactionsMasterFk1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.TransactionsMasterEO.ContractId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

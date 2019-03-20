@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="vcrb" value="#{adfBundle['gov.makkah.view.ViewControllerBundle']}"/>
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="Test1" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:pageTemplate viewId="/templets/MaingTemplets.jspx" id="pt1">
+                    <f:facet name="main">
+                        <af:panelBox text="PanelBox1" id="pb1">
+                            <f:facet name="toolbar"/>
+                            <af:table value="#{bindings.Departments1.collectionModel}" var="row"
+                                      rows="#{bindings.Departments1.rangeSize}"
+                                      emptyText="#{bindings.Departments1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.Departments1.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.Departments1.collectionModel.makeCurrent}"
+                                      rowSelection="single" fetchSize="#{bindings.Departments1.rangeSize}"
+                                      filterModel="#{bindings.Departments1Query.queryDescriptor}" filterVisible="true"
+                                      queryListener="#{bindings.Departments1Query.processQuery}" varStatus="vs" id="t1"
+                                      width="100%" columnStretching="column:c2">
+                                <af:column sortProperty="#{bindings.Departments1.hints.DepartmentId.name}"
+                                           filterable="true"
+                                           headerText="#{bindings.Departments1.hints.DepartmentId.label}" id="c1">
+                                    <af:inputText value="#{row.bindings.DepartmentId.inputValue}"
+                                                  label="#{bindings.Departments1.hints.DepartmentId.label}"
+                                                  required="#{bindings.Departments1.hints.DepartmentId.mandatory}"
+                                                  columns="#{bindings.Departments1.hints.DepartmentId.displayWidth}"
+                                                  maximumLength="#{bindings.Departments1.hints.DepartmentId.precision}"
+                                                  shortDesc="#{bindings.Departments1.hints.DepartmentId.tooltip}"
+                                                  id="it1">
+                                        <f:validator binding="#{row.bindings.DepartmentId.validator}"/>
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.Departments1.hints.DepartmentId.format}"/>
+                                    </af:inputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.Departments1.hints.DepartmentName.name}"
+                                           filterable="true"
+                                           headerText="#{bindings.Departments1.hints.DepartmentName.label}" id="c2">
+                                    <af:inputText value="#{row.bindings.DepartmentName.inputValue}"
+                                                  label="#{bindings.Departments1.hints.DepartmentName.label}"
+                                                  required="#{bindings.Departments1.hints.DepartmentName.mandatory}"
+                                                  columns="#{bindings.Departments1.hints.DepartmentName.displayWidth}"
+                                                  maximumLength="#{bindings.Departments1.hints.DepartmentName.precision}"
+                                                  shortDesc="#{bindings.Departments1.hints.DepartmentName.tooltip}"
+                                                  id="it2">
+                                        <f:validator binding="#{row.bindings.DepartmentName.validator}"/>
+                                    </af:inputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.Departments1.hints.ManagerId.name}"
+                                           filterable="true" headerText="#{bindings.Departments1.hints.ManagerId.label}"
+                                           id="c3">
+                                    <af:inputText value="#{row.bindings.ManagerId.inputValue}"
+                                                  label="#{bindings.Departments1.hints.ManagerId.label}"
+                                                  required="#{bindings.Departments1.hints.ManagerId.mandatory}"
+                                                  columns="#{bindings.Departments1.hints.ManagerId.displayWidth}"
+                                                  maximumLength="#{bindings.Departments1.hints.ManagerId.precision}"
+                                                  shortDesc="#{bindings.Departments1.hints.ManagerId.tooltip}" id="it3">
+                                        <f:validator binding="#{row.bindings.ManagerId.validator}"/>
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.Departments1.hints.ManagerId.format}"/>
+                                    </af:inputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.Departments1.hints.LocationId.name}"
+                                           filterable="true"
+                                           headerText="#{bindings.Departments1.hints.LocationId.label}" id="c4">
+                                    <af:inputText value="#{row.bindings.LocationId.inputValue}"
+                                                  label="#{bindings.Departments1.hints.LocationId.label}"
+                                                  required="#{bindings.Departments1.hints.LocationId.mandatory}"
+                                                  columns="#{bindings.Departments1.hints.LocationId.displayWidth}"
+                                                  maximumLength="#{bindings.Departments1.hints.LocationId.precision}"
+                                                  shortDesc="#{bindings.Departments1.hints.LocationId.tooltip}"
+                                                  id="it4">
+                                        <f:validator binding="#{row.bindings.LocationId.validator}"/>
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.Departments1.hints.LocationId.format}"/>
+                                    </af:inputText>
+                                </af:column>
+                            </af:table>
+                        </af:panelBox>
+                    </f:facet>
+                    <f:attribute name="currentSubLocation" value="#{vcrb.ASSET_MANAGEMENT}"/>
+                    <f:attribute name="currentSystem" value="#{vcrb.COMMON_SYSTEM}"/>
+                    <f:attribute name="currentUserName" value="أحمد عبد العظيم محمد"/>
+                    <f:facet name="foter">
+                        <af:panelGroupLayout id="pgl1" layout="vertical" halign="center" valign="middle"
+                                             styleClass="AFStretchWidth" inlineStyle="background: Green;">
+                            
+                            <?audit suppress oracle.ide.xml.wellformedness-error?>
+                            <af:spacer width="10" height="10" id="s1"/>
+                            <af:outputFormatted inlineStyle="font-size: small; color: Aqua;" value="حفو ق النسخ محفوظة لأمانة العاصمة المقدسة ـ وحدة الأصول" id="ot1" />
+                        </af:panelGroupLayout>
+                    </f:facet>
+                    <f:facet name="menu">
+                        <af:menuBar id="mb1" inlineStyle="background-color:Green;">
+                            <af:menu text="الإعدادات" id="m2">
+                                <af:commandMenuItem text="البيانات المختصرة" id="cmi1"/>
+                                <af:commandMenuItem text="دليل الجهات والإدارات" id="cmi2"/>
+                                <af:commandMenuItem text="إختصارات الأنظمة" id="cmi3"/>
+                            </af:menu>
+                            <af:spacer width="10" height="10" id="s2"/>
+                            <af:menu text="القائمة الرئيسية" id="m3">
+                                <af:commandMenuItem text="البيانات الأساسية للمشاريع" id="cmi4"/>
+                                <af:commandMenuItem text="البيانات الأساسية للعقود" id="cmi5"/>
+                            </af:menu>
+                        </af:menuBar>
+                    </f:facet>
+                    <f:attribute name="currentMainLocation" value="#{vcrb.MAKKAH_MUNCIPILTY}"/>
+                </af:pageTemplate>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

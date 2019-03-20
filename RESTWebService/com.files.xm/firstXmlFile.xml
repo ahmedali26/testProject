@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!--this document is load employees data!-->
+<Employees>
+    <Employee>
+        <id>2001</id>
+        <name>Ahmed Abd Elazeem Mohammed Ali</name>
+        <job>Senior System Analysis</job>
+        <hiredate>2012/08/20</hiredate>
+        
+    </Employee>
+</Employees>

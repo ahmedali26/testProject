@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:h="/SaidHijriCalendar">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="untitled2.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelBox text="PanelBox1" id="pb1">
+                    <f:facet name="toolbar"/>
+                    <af:table value="#{bindings.Departments1.collectionModel}" var="row"
+                              rows="#{bindings.Departments1.rangeSize}"
+                              emptyText="#{bindings.Departments1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              rowBandingInterval="0"
+                              selectedRowKeys="#{bindings.Departments1.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.Departments1.collectionModel.makeCurrent}"
+                              rowSelection="single" fetchSize="#{bindings.Departments1.rangeSize}" id="t1"
+                              varStatus="vs">
+                        <af:column headerText="#{bindings.Departments1.hints.DepartmentId.label}" id="c1">
+                            <af:inputText value="#{row.bindings.DepartmentId.inputValue}"
+                                          label="#{bindings.Departments1.hints.DepartmentId.label}"
+                                          required="#{bindings.Departments1.hints.DepartmentId.mandatory}"
+                                          columns="#{bindings.Departments1.hints.DepartmentId.displayWidth}"
+                                          maximumLength="#{bindings.Departments1.hints.DepartmentId.precision}"
+                                          shortDesc="#{bindings.Departments1.hints.DepartmentId.tooltip}" id="it1">
+                                <f:validator binding="#{row.bindings.DepartmentId.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.Departments1.hints.DepartmentId.format}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.Departments1.hints.DepartmentName.label}" id="c2">
+                            <af:inputText value="#{row.bindings.DepartmentName.inputValue}"
+                                          label="#{bindings.Departments1.hints.DepartmentName.label}"
+                                          required="#{bindings.Departments1.hints.DepartmentName.mandatory}"
+                                          columns="#{bindings.Departments1.hints.DepartmentName.displayWidth}"
+                                          maximumLength="#{bindings.Departments1.hints.DepartmentName.precision}"
+                                          shortDesc="#{bindings.Departments1.hints.DepartmentName.tooltip}" id="it2">
+                                <f:validator binding="#{row.bindings.DepartmentName.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.Departments1.hints.ManagerId.label}" id="c3">
+                            <af:inputText value="#{row.bindings.ManagerId.inputValue}"
+                                          label="#{bindings.Departments1.hints.ManagerId.label}"
+                                          required="#{bindings.Departments1.hints.ManagerId.mandatory}"
+                                          columns="#{bindings.Departments1.hints.ManagerId.displayWidth}"
+                                          maximumLength="#{bindings.Departments1.hints.ManagerId.precision}"
+                                          shortDesc="#{bindings.Departments1.hints.ManagerId.tooltip}" id="it3">
+                                <f:validator binding="#{row.bindings.ManagerId.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.Departments1.hints.ManagerId.format}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.Departments1.hints.LocationId.label}" id="c4">
+                            <af:inputText value="#{row.bindings.LocationId.inputValue}"
+                                          label="#{bindings.Departments1.hints.LocationId.label}"
+                                          required="#{bindings.Departments1.hints.LocationId.mandatory}"
+                                          columns="#{bindings.Departments1.hints.LocationId.displayWidth}"
+                                          maximumLength="#{bindings.Departments1.hints.LocationId.precision}"
+                                          shortDesc="#{bindings.Departments1.hints.LocationId.tooltip}" id="it4">
+                                <f:validator binding="#{row.bindings.LocationId.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.Departments1.hints.LocationId.format}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.Departments1.hints.Deptchdate.label}" id="c5" width="200">
+                           <!-- <af:inputText value="#{row.bindings.Deptchdate.inputValue}"
+                                          label="#{bindings.Departments1.hints.Deptchdate.label}"
+                                          required="#{bindings.Departments1.hints.Deptchdate.mandatory}"
+                                          columns="#{bindings.Departments1.hints.Deptchdate.displayWidth}"
+                                          maximumLength="#{bindings.Departments1.hints.Deptchdate.precision}"
+                                          shortDesc="#{bindings.Departments1.hints.Deptchdate.tooltip}" id="it5">
+                                <f:validator binding="#{row.bindings.Deptchdate.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.Departments1.hints.Deptchdate.format}"/>
+                            </af:inputText> -->
+                            <h:HijriCalendarWithInputext id="hcwi1" value="#{row.bindings.Deptchdate.inputValue}"
+                            required="#{bindings.Departments1.hints.Deptchdate.mandatory}"
+                                           columns="20"
+                                           shortDesc="#{bindings.Departments1.hints.Deptchdate.tooltip}"
+                                           autoSubmit="true" inptextId="t1:#{vs.index}" space="-"/>
+                        </af:column>
+                    </af:table>
+                </af:panelBox>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UsersInfoEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="USERS_INFO"
+  AliasName="UsersInfoEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="UserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_INFO"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="UserName"
+    IsNotNull="true"
+    Precision="400"
+    ColumnName="USER_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_INFO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="400"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LoginName"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="100"
+    ColumnName="LOGIN_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_INFO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MainDeptid"
+    Precision="10"
+    Scale="0"
+    ColumnName="MAIN_DEPTID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_INFO"/>
+  <Attribute
+    Name="SubDeptid"
+    Precision="10"
+    Scale="0"
+    ColumnName="SUB_DEPTID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_INFO"/>
+  <Attribute
+    Name="PhoneNum"
+    Precision="10"
+    ColumnName="PHONE_NUM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_INFO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Extntion"
+    Precision="5"
+    Scale="0"
+    ColumnName="EXTNTION"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USERS_INFO"/>
+  <Attribute
+    Name="FaxNumber"
+    Precision="10"
+    ColumnName="FAX_NUMBER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_INFO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MobileNum"
+    Precision="10"
+    ColumnName="MOBILE_NUM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_INFO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UserPassword"
+    Precision="500"
+    ColumnName="USER_PASSWORD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_INFO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="WorkEmail"
+    Precision="200"
+    ColumnName="WORK_EMAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_INFO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="YahooMail"
+    Precision="200"
+    ColumnName="YAHOO_MAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_INFO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="GoogleMail"
+    Precision="200"
+    ColumnName="GOOGLE_MAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_INFO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Facebook"
+    Precision="500"
+    ColumnName="FACEBOOK"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_INFO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Likedin"
+    Precision="500"
+    ColumnName="LIKEDIN"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_INFO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Active"
+    Precision="1"
+    Scale="0"
+    ColumnName="ACTIVE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USERS_INFO"/>
+  <Attribute
+    Name="JobId"
+    Precision="4"
+    Scale="0"
+    ColumnName="JOB_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USERS_INFO"/>
+  <Attribute
+    Name="UserType"
+    Precision="4"
+    Scale="0"
+    ColumnName="USER_TYPE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USERS_INFO"/>
+  <Attribute
+    Name="CreatedBy"
+    Precision="10"
+    Scale="0"
+    ColumnName="CREATED_BY"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_INFO"/>
+  <Attribute
+    Name="CreateDate"
+    ColumnName="CREATE_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="USERS_INFO"/>
+  <Attribute
+    Name="LastUpdatedBy"
+    Precision="10"
+    Scale="0"
+    ColumnName="LAST_UPDATED_BY"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_INFO"/>
+  <Attribute
+    Name="LastUpdatedDate"
+    ColumnName="LAST_UPDATED_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="USERS_INFO"/>
+  <Attribute
+    Name="DefualtLang"
+    Precision="1"
+    Scale="0"
+    ColumnName="DEFUALT_LANG"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USERS_INFO"/>
+  <AccessorAttribute
+    Name="UsersChatMessages"
+    Association="gov.makkah.model.ass.UsersChatMessagesFk2ASS"
+    AssociationEnd="gov.makkah.model.ass.UsersChatMessagesFk2ASS.UsersChatMessages"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersChatMessagesFk2ASS.UsersInfo"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="UsersChatMessages1"
+    Association="gov.makkah.model.ass.UsersChatMessagesFk1ASS"
+    AssociationEnd="gov.makkah.model.ass.UsersChatMessagesFk1ASS.UsersChatMessages1"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersChatMessagesFk1ASS.UsersInfo1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="UsersImages"
+    Association="gov.makkah.model.ass.UsersImagesFkASS"
+    AssociationEnd="gov.makkah.model.ass.UsersImagesFkASS.UsersImages"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersImagesFkASS.UsersInfo"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="JobsInfo"
+    Association="gov.makkah.model.ass.UsersInfoFk1ASS"
+    AssociationEnd="gov.makkah.model.ass.UsersInfoFk1ASS.JobsInfo"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersInfoFk1ASS.UsersInfo"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="UsersLocations"
+    Association="gov.makkah.model.ass.UsersLocationsFk1ASS"
+    AssociationEnd="gov.makkah.model.ass.UsersLocationsFk1ASS.UsersLocations"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersLocationsFk1ASS.UsersInfo"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="UsersRoles"
+    Association="gov.makkah.model.ass.UsersRolesFk2ASS"
+    AssociationEnd="gov.makkah.model.ass.UsersRolesFk2ASS.UsersRoles"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersRolesFk2ASS.UsersInfo"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="UserLoginAuditing"
+    Association="gov.makkah.model.ass.UserLoginAuditingFkASS"
+    AssociationEnd="gov.makkah.model.ass.UserLoginAuditingFkASS.UserLoginAuditing"
+    AssociationOtherEnd="gov.makkah.model.ass.UserLoginAuditingFkASS.UsersInfo"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="UserLoginPageAuditing"
+    Association="gov.makkah.model.ass.OginPageAuditingFkASS"
+    AssociationEnd="gov.makkah.model.ass.OginPageAuditingFkASS.UserLoginPageAuditing"
+    AssociationOtherEnd="gov.makkah.model.ass.OginPageAuditingFkASS.UsersInfo"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="UserMstrUseridNn">
+    <DesignTime>
+      <Attr Name="_checkCondition" Value='"USER_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USER_MSTR_USERID_NN"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="UserMstrUsernaNn">
+    <DesignTime>
+      <Attr Name="_checkCondition" Value='"USER_NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USER_MSTR_USERNA_NN"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="UserMstrUsernalgN">
+    <DesignTime>
+      <Attr Name="_checkCondition" Value='"LOGIN_NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USER_MSTR_USERNALG_N"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="UsersMasterUnq">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERS_MASTER_UNQ"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersInfoEO.LoginName"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersMastersPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="USERS_MASTERS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersInfoEO.UserId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersInfoFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="JOBS_INFO_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERS_INFO_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersInfoEO.JobId"/>
+    </AttrArray>
+  </Key>
+</Entity>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ProceduresDocRequiredEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="PROCEDURES_DOC_REQUIRED"
+  AliasName="ProceduresDocRequiredEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="ItemId"
+    IsNotNull="true"
+    Precision="4"
+    Scale="0"
+    ColumnName="ITEM_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="PROCEDURES_DOC_REQUIRED"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="DocId"
+    IsNotNull="true"
+    Precision="4"
+    Scale="0"
+    ColumnName="DOC_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="PROCEDURES_DOC_REQUIRED"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="DocDesc"
+    IsNotNull="true"
+    Precision="400"
+    ColumnName="DOC_DESC"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PROCEDURES_DOC_REQUIRED">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="400"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="ProceduresDocRequiredPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PROCEDURES_DOC_REQUIRED_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.ProceduresDocRequiredEO.ItemId"/>
+      <Item Value="gov.makkah.model.eo.ProceduresDocRequiredEO.DocId"/>
+    </AttrArray>
+  </Key>
+</Entity>

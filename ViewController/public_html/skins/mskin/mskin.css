@@ -1,0 +1,194 @@
+@charset "UTF-8";
+/**ADFFaces_Skin_File / DO NOT REMOVE**/
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+
+af|menu::bar-item-text {
+    color: #005229; 
+}
+
+af|menu::bar-item {
+    background-color: #01C482; 
+}
+
+af|menu::bar-item-text[theme="dark"] {
+    color: #001852; 
+}
+
+af|menu::bar-item[theme="dark"] {
+    background-color: #D6F7FF; 
+}
+
+.AFBrandingBarItem af|menu::bar-item-text {
+    color: #005229; 
+}
+
+.AFBrandingBarItem af|menu::bar-item:highlighted {
+    background-color: #FFDE73; 
+    background-image: none; 
+}
+
+.AFBrandingBarItem af|menu::bar-item:depressed {
+    background-color: #FF8400; 
+    background-image: none; 
+}
+
+.AFBrandingBarItem af|menu::bar-item {
+    background-color: #005229; 
+}
+
+af|panelTabbed::tab af|panelTabbed::tab-text-link, af|navigationPane-tabs::tab af|navigationPane-tabs::tab-link {
+    color: #94FF94; 
+}
+
+af|panelTabbed::tab af|panelTabbed::tab-text-link:disabled, af|panelTabbed::tab:selected af|panelTabbed::tab-text-link:disabled, af|navigationPane-tabs::tab:disabled af|navigationPane-tabs::tab-link, af|navigationPane-tabs::tab:selected:disabled af|navigationPane-tabs::tab-link, af|navigationPane-bar::content af|navigationPane-bar::link:disabled {
+    color: #D6FFD6; 
+}
+
+af|panelTabbed::tab:selected af|panelTabbed::tab-content, af|panelTabbed::tab:selected af|panelTabbed::tab-text-link, af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-content, af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-link {
+    color: #005200; 
+}
+
+af|panelTabbed::tab:selected af|panelTabbed::tab-content, af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-content {
+    background-color: #53f9ad; 
+}
+
+af|panelTabbed::body {
+    background-color: #53f9ad; 
+}
+
+af|panelTabbed:iconified af|panelTabbed::tab:selected af|panelTabbed::tab-content {
+    background-color: #53f9ad; 
+}
+
+af|panelTabbed::tab:disabled af|panelTabbed::tab-content, af|navigationPane-tabs::tab:disabled af|navigationPane-tabs::tab-content {
+    background-color: #d5ffeb; 
+}
+
+af|panelTabbed:iconified af|panelTabbed::tab:disabled af|panelTabbed::tab-content, af|panelTabbed:iconified af|panelTabbed::tab:disabled:hover af|panelTabbed::tab-content {
+    background-color: #d5ffeb; 
+}
+
+af|panelTabbed::tab-content, af|navigationPane-tabs::tab-content {
+    background-color: #adf5d4; 
+}
+
+af|panelTabbed:iconified af|panelTabbed::tab-content {
+    background-color: #adf5d4; 
+}
+
+.AFPanelBoxHeaderCoreDefault:alias {
+    background-color: #08d49d; 
+    color: #D6FFFF; 
+}
+
+.AFPanelBoxContentCoreDefault:alias {
+    background-color: #08d49d; 
+    color: #D6FFFF; 
+}
+
+af|menu::bar-item:depressed {
+    background-color: #b9e0c5; 
+    background-image: none; 
+}
+
+af|menu::bar-item:highlighted {
+    background-color: #d4ef94; 
+    background-image: none; 
+}
+
+af|panelAccordion::body-content {
+    background-color: #01C482; 
+}
+
+.AFFormControlContentColor:alias {
+    color: White; 
+}
+
+.AFComponentBackgroundColor:alias {
+    color: White; 
+}
+
+.AFGridCellBorderColor:alias {
+    color: #EDEDED; 
+}
+
+.AFComponentBackground2Color:alias {
+    color: #FAFAFA; 
+}
+
+.AFGridControlColor:alias {
+    color: White; 
+}
+
+/*INFO: Color value exceeded range after adjustment: HSL(0, -27%, 70%)*/
+.AFGridControlSelectedColor:alias {
+    color: #B3B3B3; 
+}
+
+/*INFO: Color value exceeded range after adjustment: HSL(0, -20%, 86%)*/
+.AFHVPanelCardBorderColor:alias {
+    color: #DBDBDB; 
+}
+
+.AFGridControl2Color:alias {
+    color: White; 
+}
+
+.AFGridCellActiveColor:alias {
+    color: White; 
+}
+
+af|column::column-header-cell {
+    background-image: none; 
+    background: #404040; 
+    color: #f7f3f3; 
+}
+
+af|table::data-row:selected af|column::data-cell
+{  
+background-color: #eeaa00;
+color: #ffffff;  
+}
+af|table::data-row:selected af|column::banded-data-cell
+{  
+background-color: #eeaa00; 
+color: #ffffff;  
+
+}
+
+af|panelCollection af|table {
+    background: #5a6f03; 
+    color: #fcfff2; 
+}
+
+.AFGridCellSelectedInactiveColor:alias {
+    }
+
+af|panelBox::header-element {
+    color: Yellow; 
+}
+
+af|menu::bar-item {
+    background-color: #02421d; 
+}
+
+.AFBrandingBarItem af|menu::bar-item-text {
+    color: #F7B500; 
+    font-weight: bold; 
+}
+
+af|menu::bar-item-text[theme="dark"] {
+    color: #F7B500; 
+    font-weight: bold; 
+}
+
+af|menu::bar-item-text {
+    color: #F7B500; 
+    font-weight: bold; 
+}
+
+af|commandMenuItem::menu-item-text {
+    font-size: 12pt; 
+    color: #02421d; 
+}

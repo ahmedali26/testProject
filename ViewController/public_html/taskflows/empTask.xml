@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="empTask">
+    <default-activity>EmpPage</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <managed-bean id="__4">
+      <managed-bean-name>empDeptBean</managed-bean-name>
+      <managed-bean-class>gov.makkah.view.beans.EmpDeptBean</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <view id="EmpPage">
+      <page>/pages/CallTask/EmpPage.jspx</page>
+    </view>
+    <task-flow-call id="task-flow-definition">
+      <task-flow-reference>
+        <document>/taskflows/deptTask.xml</document>
+        <id>task-flow-definition</id>
+      </task-flow-reference>
+      <return-value id="__3">
+        <name>deptId</name>
+        <value>#{pageFlowScope.returnDeptId}</value>
+      </return-value>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>EmpPage</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>newDept</from-outcome>
+        <to-activity-id>task-flow-definition</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

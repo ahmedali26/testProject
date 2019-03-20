@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">EmpPage</property>
+      <property
+         name="x">231.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>EmpPage&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">149.14355</property>
+      <property
+         name="page">/pages/CallTask/EmpPage.jspx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall3">
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>task-flow-definition&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">task-flow-definition</property>
+      <property
+         name="x">528.6875</property>
+      <property
+         name="y">142.69531</property>
+      <property
+         name="documentReference">/taskflows/deptTask.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">task-flow-definition</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="TaskFlowCall3">
+      <property
+         name="fromOutcome">newDept</property>
+      <property
+         name="sdm:polyPoints">R50,272.0,148.79297,487.6875,142.34473,L50</property>
+   </ControlFlowCase>
+</SDM>

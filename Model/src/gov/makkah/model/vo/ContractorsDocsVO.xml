@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ContractorsDocsVO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  RowClass="gov.makkah.share.CustomizeViewRowImpl"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="ContractorsDocsEO"
+    Entity="gov.makkah.model.eo.ContractorsDocsEO"/>
+  <ViewAttribute
+    Name="ContractorId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ContractorId"
+    EntityUsage="ContractorsDocsEO"
+    AliasName="CONTRACTOR_ID"/>
+  <ViewAttribute
+    Name="FileId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="FileId"
+    EntityUsage="ContractorsDocsEO"
+    AliasName="FILE_ID"/>
+  <ViewAttribute
+    Name="FileName"
+    PrecisionRule="true"
+    EntityAttrName="FileName"
+    EntityUsage="ContractorsDocsEO"
+    AliasName="FILE_NAME"/>
+  <ViewAttribute
+    Name="FilePath"
+    PrecisionRule="true"
+    EntityAttrName="FilePath"
+    EntityUsage="ContractorsDocsEO"
+    AliasName="FILE_PATH"/>
+  <ViewAttribute
+    Name="ContentType"
+    PrecisionRule="true"
+    EntityAttrName="ContentType"
+    EntityUsage="ContractorsDocsEO"
+    AliasName="CONTENT_TYPE"/>
+  <ViewAttribute
+    Name="FileDesc"
+    PrecisionRule="true"
+    EntityAttrName="FileDesc"
+    EntityUsage="ContractorsDocsEO"
+    AliasName="FILE_DESC"/>
+</ViewObject>

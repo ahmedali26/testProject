@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:h="/SaidHijriCalendar">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="untitled1.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelBox text="PanelBox1" id="pb1">
+                    <f:facet name="toolbar">
+                        <af:toolbar id="t1">
+                            <af:button actionListener="#{bindings.Commit.execute}" text="Commit" id="b1"/>
+                        </af:toolbar>
+                    </f:facet>
+                    <af:panelFormLayout id="pfl1">
+                        <af:inputText value="#{bindings.DepartmentId.inputValue}"
+                                      label="#{bindings.DepartmentId.hints.label}"
+                                      required="#{bindings.DepartmentId.hints.mandatory}"
+                                      columns="#{bindings.DepartmentId.hints.displayWidth}"
+                                      maximumLength="#{bindings.DepartmentId.hints.precision}"
+                                      shortDesc="#{bindings.DepartmentId.hints.tooltip}" id="it1">
+                            <f:validator binding="#{bindings.DepartmentId.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.DepartmentId.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.DepartmentName.inputValue}"
+                                      label="#{bindings.DepartmentName.hints.label}"
+                                      required="#{bindings.DepartmentName.hints.mandatory}"
+                                      columns="#{bindings.DepartmentName.hints.displayWidth}"
+                                      maximumLength="#{bindings.DepartmentName.hints.precision}"
+                                      shortDesc="#{bindings.DepartmentName.hints.tooltip}" id="it2">
+                            <f:validator binding="#{bindings.DepartmentName.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.ManagerId.inputValue}" label="#{bindings.ManagerId.hints.label}"
+                                      required="#{bindings.ManagerId.hints.mandatory}"
+                                      columns="#{bindings.ManagerId.hints.displayWidth}"
+                                      maximumLength="#{bindings.ManagerId.hints.precision}"
+                                      shortDesc="#{bindings.ManagerId.hints.tooltip}" id="it3">
+                            <f:validator binding="#{bindings.ManagerId.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.ManagerId.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.LocationId.inputValue}"
+                                      label="#{bindings.LocationId.hints.label}"
+                                      required="#{bindings.LocationId.hints.mandatory}"
+                                      columns="#{bindings.LocationId.hints.displayWidth}"
+                                      maximumLength="#{bindings.LocationId.hints.precision}"
+                                      shortDesc="#{bindings.LocationId.hints.tooltip}" id="it4">
+                            <f:validator binding="#{bindings.LocationId.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.LocationId.format}"/>
+                        </af:inputText>
+                        <af:panelLabelAndMessage label="تاريخ الإنشاء" id="plam1">
+                            <h:HijriCalendarWithInputext id="hcwi1" value="#{bindings.Deptchdate.inputValue}"
+                                                         required="true" columns="20"
+                                                         shortDesc="#{bindings.Deptchdate.hints.tooltip}"
+                                                         autoSubmit="true"
+                                                         valueChangeListener="#{hijreDateServices.deptCreationListener}"
+                                                         space="-"/>
+                        </af:panelLabelAndMessage>
+                    </af:panelFormLayout>
+                    <af:spacer width="10" height="10" id="s1"/>
+                </af:panelBox>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

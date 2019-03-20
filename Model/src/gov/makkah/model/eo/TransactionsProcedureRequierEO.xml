@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TransactionsProcedureRequierEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TRANSACTIONS_PROCEDURE_REQUIER"
+  AliasName="TransactionsProcedureRequier1"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="TransId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="TRANS_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_PROCEDURE_REQUIER"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ItemId"
+    IsNotNull="true"
+    Precision="4"
+    Scale="0"
+    ColumnName="ITEM_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_PROCEDURE_REQUIER"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="DocId"
+    IsNotNull="true"
+    Precision="4"
+    Scale="0"
+    ColumnName="DOC_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_PROCEDURE_REQUIER"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="DigitalCopy"
+    Precision="1"
+    Scale="0"
+    ColumnName="DIGITAL_COPY"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_PROCEDURE_REQUIER"/>
+  <Attribute
+    Name="GisFiles"
+    Precision="1"
+    Scale="0"
+    ColumnName="GIS_FILES"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_PROCEDURE_REQUIER"/>
+  <Attribute
+    Name="CadFile"
+    Precision="1"
+    Scale="0"
+    ColumnName="CAD_FILE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_PROCEDURE_REQUIER"/>
+  <AccessorAttribute
+    Name="TransactionsMaster"
+    Association="gov.makkah.model.ass.TprFkASS"
+    AssociationEnd="gov.makkah.model.ass.TprFkASS.TransactionsMaster"
+    AssociationOtherEnd="gov.makkah.model.ass.TprFkASS.TransactionsProcedureRequier"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="TprPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="TPR_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.TransactionsProcedureRequierEO.TransId"/>
+      <Item Value="gov.makkah.model.eo.TransactionsProcedureRequierEO.ItemId"/>
+      <Item Value="gov.makkah.model.eo.TransactionsProcedureRequierEO.DocId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TprFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="TRANSACTIONS_MASTER_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TPR_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.TransactionsProcedureRequierEO.TransId"/>
+    </AttrArray>
+  </Key>
+</Entity>

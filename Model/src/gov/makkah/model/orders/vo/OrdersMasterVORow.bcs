@@ -1,0 +1,20 @@
+//Groovy Scripts for gov.makkah.model.orders.vo.OrdersMasterVO
+
+package gov.makkah.model.orders.vo
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+import oracle.jbo.script.annotation.RefreshExpression;
+
+@TransientValueExpression(attributeName="PaymenttypeDesc")
+def Cash_ExpressionScript_Expression()
+{
+Paymenttype==1 ? "Cash" : "Cridet"
+}
+
+
+@RefreshExpression(attributeName="PaymenttypeDesc")
+def Cash_RecalcExpressionScript_RecalcExpression()
+{
+true
+}
+

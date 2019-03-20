@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="pivotTable.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <dvt:pivotTable id="pt1" value="#{bindings.Employees2.pivotTableModel}" var="cellData"
+                                varStatus="cellStatus" splitMode="enabled">
+                    <dvt:headerCell>
+                        <af:switcher facetName="#{cellData.layerName}" defaultFacet="Default" id="s1">
+                            <f:facet name="DataLayer">
+                                <af:outputText value="#{cellData.label}" id="ot1"/>
+                            </f:facet>
+                            <f:facet name="JobId">
+                                <af:outputText value="#{cellData.dataValue}" id="ot2"/>
+                            </f:facet>
+                            <f:facet name="DepartmentId">
+                                <af:outputText value="#{cellData.dataValue}" id="ot3">
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.Employees2.hints.DepartmentId.format}"/>
+                                </af:outputText>
+                            </f:facet>
+                            <f:facet name="Default">
+                                <af:outputText value="#{cellData.dataValue}" id="ot4"/>
+                            </f:facet>
+                        </af:switcher>
+                    </dvt:headerCell>
+                    <dvt:dataCell id="dc1">
+                        <af:switcher facetName="#{cellStatus.members.DataLayer.value}" defaultFacet="Default" id="s2">
+                            <f:facet name="EmployeeId">
+                                <af:outputText value="#{cellData.dataValue}" id="ot5">
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.Employees2.hints.EmployeeId.format}"/>
+                                </af:outputText>
+                            </f:facet>
+                            <f:facet name="Default">
+                                <af:outputText value="#{cellData.dataValue}" id="ot6"/>
+                            </f:facet>
+                        </af:switcher>
+                    </dvt:dataCell>
+                </dvt:pivotTable>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

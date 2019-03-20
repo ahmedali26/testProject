@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1256"?>
+<skins xmlns="http://myfaces.apache.org/trinidad/skin">
+  <skin>
+    <id>mskin.desktop</id>
+    <family>mskin</family>
+    <extends>skyros-v1.desktop</extends>
+    <render-kit-id>org.apache.myfaces.trinidad.desktop</render-kit-id>
+    <style-sheet-name>skins/mskin/mskin.css</style-sheet-name>
+    <bundle-name>gov.makkah.view.skinBundle</bundle-name>
+  </skin>
+
+ <!--
+  <skin>
+    <id>ultaSken.desktop</id>
+    <family>ultaSken</family>
+    <extends>alta-v1.desktop</extends>
+    <render-kit-id>org.apache.myfaces.trinidad.desktop</render-kit-id>
+    <style-sheet-name>skins/ultaSken/ultaSken.css</style-sheet-name>
+    <bundle-name>gov.makkah.view.skinBundle</bundle-name>
+  </skin>
+  -->
+</skins> 

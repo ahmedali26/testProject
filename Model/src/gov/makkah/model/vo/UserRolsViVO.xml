@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UserRolsViVO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  RowClass="gov.makkah.share.CustomizeViewRowImpl"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="UserRolsViEO"
+    Entity="gov.makkah.model.eo.UserRolsViEO"/>
+  <ViewAttribute
+    Name="UserId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="UserId"
+    EntityUsage="UserRolsViEO"
+    AliasName="USER_ID"/>
+  <ViewAttribute
+    Name="LoginName"
+    PrecisionRule="true"
+    EntityAttrName="LoginName"
+    EntityUsage="UserRolsViEO"
+    AliasName="LOGIN_NAME"/>
+  <ViewAttribute
+    Name="ApplicationId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ApplicationId"
+    EntityUsage="UserRolsViEO"
+    AliasName="APPLICATION_ID"/>
+  <ViewAttribute
+    Name="RoleId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="RoleId"
+    EntityUsage="UserRolsViEO"
+    AliasName="ROLE_ID"/>
+  <ViewAttribute
+    Name="RoleName"
+    PrecisionRule="true"
+    EntityAttrName="RoleName"
+    EntityUsage="UserRolsViEO"
+    AliasName="ROLE_NAME"/>
+</ViewObject>

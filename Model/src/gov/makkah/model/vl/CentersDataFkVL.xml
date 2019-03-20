@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CentersDataFkVL"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  EntityAssociation="gov.makkah.model.ass.CentersDataFkASS">
+  <ViewLinkDefEnd
+    Name="ProvincesData"
+    Cardinality="1"
+    Source="true"
+    Owner="gov.makkah.model.vo.ProvincesDataVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="ProvincesData"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.vo.ProvincesDataVO.LocationId"/>
+      <Item Value="gov.makkah.model.vo.ProvincesDataVO.SubLocationId"/>
+      <Item Value="gov.makkah.model.vo.ProvincesDataVO.ProvinceId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="CentersData"
+    Cardinality="-1"
+    Owner="gov.makkah.model.vo.CentersDataVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="CentersData"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.vo.CentersDataVO.LocationId"/>
+      <Item Value="gov.makkah.model.vo.CentersDataVO.SubLocationId"/>
+      <Item Value="gov.makkah.model.vo.CentersDataVO.ProvinceId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UserRolesDetailsViEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="USER_ROLES_DETAILS_VI"
+  AliasName="UserRolesDetailsViEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="UserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_ROLES_DETAILS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="LoginName"
+    Precision="4000"
+    ColumnName="LOGIN_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_ROLES_DETAILS_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4000"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ApplicationId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="APPLICATION_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_ROLES_DETAILS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ApplicationName"
+    Precision="4000"
+    ColumnName="APPLICATION_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_ROLES_DETAILS_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4000"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ModuleId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="MODULE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_ROLES_DETAILS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="RoleId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="ROLE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_ROLES_DETAILS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ActivityId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="ACTIVITY_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_ROLES_DETAILS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ActivityName"
+    Precision="150"
+    ColumnName="ACTIVITY_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_ROLES_DETAILS_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="InsertFlg"
+    Precision="1"
+    Scale="0"
+    ColumnName="INSERT_FLG"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USER_ROLES_DETAILS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="UpdateFlg"
+    Precision="1"
+    Scale="0"
+    ColumnName="UPDATE_FLG"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USER_ROLES_DETAILS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="DeleteFlg"
+    Precision="1"
+    Scale="0"
+    ColumnName="DELETE_FLG"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USER_ROLES_DETAILS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="QueryFlg"
+    Precision="1"
+    Scale="0"
+    ColumnName="QUERY_FLG"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USER_ROLES_DETAILS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="PrintFlg"
+    Precision="1"
+    Scale="0"
+    ColumnName="PRINT_FLG"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USER_ROLES_DETAILS_VI"
+    PrimaryKey="true"/>
+  <Key
+    Name="UserrolesdetailsvieoPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="USERROLESDETAILSVIEO_PRIMARY_K"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UserRolesDetailsViEO.UserId"/>
+      <Item Value="gov.makkah.model.eo.UserRolesDetailsViEO.LoginName"/>
+      <Item Value="gov.makkah.model.eo.UserRolesDetailsViEO.ApplicationId"/>
+      <Item Value="gov.makkah.model.eo.UserRolesDetailsViEO.ApplicationName"/>
+      <Item Value="gov.makkah.model.eo.UserRolesDetailsViEO.ModuleId"/>
+      <Item Value="gov.makkah.model.eo.UserRolesDetailsViEO.RoleId"/>
+      <Item Value="gov.makkah.model.eo.UserRolesDetailsViEO.ActivityId"/>
+      <Item Value="gov.makkah.model.eo.UserRolesDetailsViEO.ActivityName"/>
+      <Item Value="gov.makkah.model.eo.UserRolesDetailsViEO.InsertFlg"/>
+      <Item Value="gov.makkah.model.eo.UserRolesDetailsViEO.UpdateFlg"/>
+      <Item Value="gov.makkah.model.eo.UserRolesDetailsViEO.DeleteFlg"/>
+      <Item Value="gov.makkah.model.eo.UserRolesDetailsViEO.QueryFlg"/>
+      <Item Value="gov.makkah.model.eo.UserRolesDetailsViEO.PrintFlg"/>
+    </AttrArray>
+  </Key>
+</Entity>

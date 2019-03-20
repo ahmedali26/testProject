@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UserRolsViEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="USER_ROLS_VI"
+  AliasName="UserRolsViEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="UserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_ROLS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="LoginName"
+    Precision="4000"
+    ColumnName="LOGIN_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_ROLS_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4000"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ApplicationId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="APPLICATION_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_ROLS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="RoleId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="ROLE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_ROLS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="RoleName"
+    Precision="200"
+    ColumnName="ROLE_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_ROLS_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="UserrolsvieoPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="USERROLSVIEO_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UserRolsViEO.UserId"/>
+      <Item Value="gov.makkah.model.eo.UserRolsViEO.LoginName"/>
+      <Item Value="gov.makkah.model.eo.UserRolsViEO.ApplicationId"/>
+      <Item Value="gov.makkah.model.eo.UserRolsViEO.RoleId"/>
+      <Item Value="gov.makkah.model.eo.UserRolsViEO.RoleName"/>
+    </AttrArray>
+  </Key>
+</Entity>

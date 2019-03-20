@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:table value="#{bindings.EmpWithPram1.collectionModel}" var="row" rows="#{bindings.EmpWithPram1.rangeSize}"
+            emptyText="#{bindings.EmpWithPram1.viewable ? 'No data to display.' : 'Access Denied.'}"
+            rowBandingInterval="0" selectedRowKeys="#{bindings.EmpWithPram1.collectionModel.selectedRow}"
+            selectionListener="#{bindings.EmpWithPram1.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.EmpWithPram1.rangeSize}" filterModel="#{bindings.EmpWithPram1Query.queryDescriptor}"
+            filterVisible="true" queryListener="#{bindings.EmpWithPram1Query.processQuery}" varStatus="vs" id="t1">
+    <af:column headerText="Group" filterable="true" id="c1" align="center">
+      <af:column sortProperty="#{bindings.EmpWithPram1.hints.EmployeeId.name}" filterable="true"
+                 headerText="#{bindings.EmpWithPram1.hints.EmployeeId.label}" id="c2">
+        <af:outputText value="#{row.EmployeeId}" shortDesc="#{bindings.EmpWithPram1.hints.EmployeeId.tooltip}" id="ot1">
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.EmpWithPram1.hints.EmployeeId.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.EmpWithPram1.hints.FirstName.name}" filterable="true"
+                 headerText="#{bindings.EmpWithPram1.hints.FirstName.label}" id="c3">
+        <af:outputText value="#{row.FirstName}" shortDesc="#{bindings.EmpWithPram1.hints.FirstName.tooltip}" id="ot2"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.EmpWithPram1.hints.LastName.name}" filterable="true"
+                 headerText="#{bindings.EmpWithPram1.hints.LastName.label}" id="c4">
+        <af:outputText value="#{row.LastName}" shortDesc="#{bindings.EmpWithPram1.hints.LastName.tooltip}" id="ot3"/>
+      </af:column>
+    </af:column>
+    <af:column sortProperty="#{bindings.EmpWithPram1.hints.HireDate.name}" filterable="true"
+               headerText="#{bindings.EmpWithPram1.hints.HireDate.label}" id="c5">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.EmpWithPram1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.HireDate.value}"
+                      id="id1">
+          <af:convertDateTime pattern="#{bindings.EmpWithPram1.hints.HireDate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.HireDate}" shortDesc="#{bindings.EmpWithPram1.hints.HireDate.tooltip}" id="ot4">
+        <af:convertDateTime pattern="#{bindings.EmpWithPram1.hints.HireDate.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.EmpWithPram1.hints.JobId.name}" filterable="true"
+               headerText="#{bindings.EmpWithPram1.hints.JobId.label}" id="c6">
+      <af:outputText value="#{row.JobId}" shortDesc="#{bindings.EmpWithPram1.hints.JobId.tooltip}" id="ot5"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.EmpWithPram1.hints.DepartmentId.name}" filterable="true"
+               headerText="#{bindings.EmpWithPram1.hints.DepartmentId.label}" id="c7">
+      <af:outputText value="#{row.DepartmentId}" shortDesc="#{bindings.EmpWithPram1.hints.DepartmentId.tooltip}"
+                     id="ot6">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.EmpWithPram1.hints.DepartmentId.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.EmpWithPram1.hints.ManagerId.name}" filterable="true"
+               headerText="#{bindings.EmpWithPram1.hints.ManagerId.label}" id="c8">
+      <af:outputText value="#{row.ManagerId}" shortDesc="#{bindings.EmpWithPram1.hints.ManagerId.tooltip}" id="ot7">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.EmpWithPram1.hints.ManagerId.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.EmpWithPram1.hints.Email.name}" filterable="true"
+               headerText="#{bindings.EmpWithPram1.hints.Email.label}" id="c9">
+      <af:outputText value="#{row.Email}" shortDesc="#{bindings.EmpWithPram1.hints.Email.tooltip}" id="ot8"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.EmpWithPram1.hints.PhoneNumber.name}" filterable="true"
+               headerText="#{bindings.EmpWithPram1.hints.PhoneNumber.label}" id="c10">
+      <af:outputText value="#{row.PhoneNumber}" shortDesc="#{bindings.EmpWithPram1.hints.PhoneNumber.tooltip}"
+                     id="ot9"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.EmpWithPram1.hints.Salary.name}" filterable="true"
+               headerText="#{bindings.EmpWithPram1.hints.Salary.label}" id="c11">
+      <af:outputText value="#{row.Salary}" shortDesc="#{bindings.EmpWithPram1.hints.Salary.tooltip}" id="ot10">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.EmpWithPram1.hints.Salary.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.EmpWithPram1.hints.CommissionPct.name}" filterable="true"
+               headerText="#{bindings.EmpWithPram1.hints.CommissionPct.label}" id="c12">
+      <af:outputText value="#{row.CommissionPct}" shortDesc="#{bindings.EmpWithPram1.hints.CommissionPct.tooltip}"
+                     id="ot11">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.EmpWithPram1.hints.CommissionPct.format}"/>
+      </af:outputText>
+    </af:column>
+  </af:table>
+</jsp:root>

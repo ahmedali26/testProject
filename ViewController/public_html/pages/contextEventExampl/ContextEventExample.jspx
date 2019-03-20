@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="ContextEventExample.jspx" id="d1">
+            <af:form id="f1">
+                <af:panelSplitter id="ps1" splitterPosition="400">
+                    <f:facet name="first">
+                        <af:panelBox text="الإدارات" id="pb1">
+                            <f:facet name="toolbar"/>
+                            <af:region value="#{bindings.deptForContextEventFlow1.regionModel}" id="r1"
+                                       styleClass="AFStretchWidth"/>
+                        </af:panelBox>
+                    </f:facet>
+                    <f:facet name="second">
+                        <af:panelBox text="الموظفين" id="pb2">
+                            <f:facet name="toolbar"/>
+                            <af:region value="#{bindings.empForContEventflow1.regionModel}" id="r2"/>
+                        </af:panelBox>
+                    </f:facet>
+                </af:panelSplitter>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <af:pageTemplateDef var="attrs" definition="private">
+        <af:xmlContent>
+            <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+                <description>this the main templete for main pages in projects</description>
+                <display-name>MaingTemplets</display-name>
+                <facet>
+                    <facet-name>
+                        foter
+                    </facet-name>
+                </facet>
+                <facet>
+                    <facet-name>
+                        main
+                    </facet-name>
+                </facet>
+                <facet>
+                    <facet-name>
+                        menu
+                    </facet-name>
+                </facet>
+                <attribute>
+                    <attribute-name>currentSystem</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                </attribute>
+                <attribute>
+                    <attribute-name>currentUserName</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                </attribute>
+                <attribute>
+                    <attribute-name>currentMainLocation</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                </attribute>
+                <attribute>
+                    <attribute-name>currentSubLocation</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                </attribute>
+                <attribute>
+                    <attribute-name>currentDateInSystem</attribute-name>
+                    <attribute-class>java.util.Date</attribute-class>
+                </attribute>
+                <attribute>
+                    <attribute-name>copyRights</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                </attribute>
+            </component>
+        </af:xmlContent>
+        <af:panelStretchLayout id="pt_psl1" topHeight="100px">
+            <f:facet name="start"/>
+            <f:facet name="end"/>
+            <f:facet name="top">
+                <af:panelGridLayout id="pt_pgl4">
+                    <af:gridRow marginTop="0px" height="auto" id="pt_gr1">
+                        <af:gridCell marginStart="0px" width="20%" id="pt_gc1" halign="center" valign="middle">
+                            <af:panelGroupLayout id="pt_pgl1" layout="vertical" halign="center">
+                                <af:spacer width="10" height="10" id="pt_s6"/>
+                                <af:outputText value="#{attrs.currentSystem}" id="pt_ot1"/>
+                                <af:spacer width="10" height="10" id="pt_s1"/>
+                                <af:outputText value="#{attrs.currentDateInSystem}" id="pt_ot2"/>
+                            </af:panelGroupLayout>
+                        </af:gridCell>
+                        <af:gridCell marginStart="0px" width="40%" id="pt_gc2" halign="center" valign="middle">
+                            <af:panelGroupLayout id="pt_pgl2" layout="horizontal" halign="center" valign="middle">
+                                <af:spacer width="10" height="10" id="pt_s2"/>
+                                <af:image source="#{resource['images:logo.png']}" id="pt_i2"/>
+                                <af:spacer width="10" height="10" id="pt_s3"/>
+                            </af:panelGroupLayout>
+                        </af:gridCell>
+                        <af:gridCell marginStart="0px" width="20%" marginEnd="0px" id="pt_gc3" halign="center" valign="middle">
+                            <af:panelFormLayout id="pt_pfl1" rows="1">
+                                <af:panelGroupLayout id="pt_pgl3" layout="vertical" halign="center">
+                                    <af:outputText value="#{attrs.currentMainLocation}" id="pt_ot3"/>
+                                    <af:spacer width="10" height="10" id="pt_s4"/>
+                                    <af:outputText value="#{attrs.currentSubLocation}" id="pt_ot4"/>
+                                    <af:spacer width="10" height="10" id="pt_s5"/>
+                                    <af:outputText value="#{attrs.currentUserName}" id="pt_ot5"/>
+                                </af:panelGroupLayout>
+                            </af:panelFormLayout>
+                        </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="pt_gr2">
+                        <af:gridCell marginStart="0px" columnSpan="3" marginEnd="0px" id="pt_gc4"/>
+                    </af:gridRow>
+                </af:panelGridLayout>
+            </f:facet>
+            <f:facet name="bottom">
+                <af:facetRef facetName="foter"/>
+            </f:facet>
+            <f:facet name="center">
+                <af:panelStretchLayout id="pt_psl2" topHeight="25px">
+                    <f:facet name="center">
+                        <af:facetRef facetName="main"/>
+                    </f:facet>
+                    <f:facet name="top">
+                        <af:facetRef facetName="menu"/>
+                    </f:facet>
+                </af:panelStretchLayout>
+            </f:facet>
+        </af:panelStretchLayout>
+    </af:pageTemplateDef>
+</jsp:root>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CampsDataFkASS"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="CentersData"
+    Cardinality="1"
+    Source="true"
+    Owner="gov.makkah.model.eo.CentersDataEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="CentersData"/>
+      <Attr Name="_foreignKey" Value="gov.makkah.model.eo.CentersDataEO.CentersDataPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.CentersDataEO.LocationId"/>
+      <Item Value="gov.makkah.model.eo.CentersDataEO.SubLocationId"/>
+      <Item Value="gov.makkah.model.eo.CentersDataEO.ProvinceId"/>
+      <Item Value="gov.makkah.model.eo.CentersDataEO.CenterId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="CampsData"
+    Cardinality="-1"
+    Owner="gov.makkah.model.eo.CampsDataEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="CampsData"/>
+      <Attr Name="_foreignKey" Value="gov.makkah.model.eo.CampsDataEO.CampsDataFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.CampsDataEO.LocationId"/>
+      <Item Value="gov.makkah.model.eo.CampsDataEO.SubLocationId"/>
+      <Item Value="gov.makkah.model.eo.CampsDataEO.ProvinceId"/>
+      <Item Value="gov.makkah.model.eo.CampsDataEO.CenterId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

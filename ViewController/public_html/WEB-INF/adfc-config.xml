@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <managed-bean id="__1">
+    <managed-bean-name>hijreDateServices</managed-bean-name>
+    <managed-bean-class>gov.makkah.view.beans.HijreDateServices</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__2">
+    <managed-bean-name>pollTestBean</managed-bean-name>
+    <managed-bean-class>gov.makkah.view.beans.PollTestBean</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>sendWhatsAppBean</managed-bean-name>
+    <managed-bean-class>gov.makkah.view.beans.SendWhatsAppBean</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

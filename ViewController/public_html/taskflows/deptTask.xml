@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="task-flow-definition">
+    <default-activity>CreateInsert1</default-activity>
+    <transaction>
+      <new-transaction/>
+    </transaction>
+    <data-control-scope>
+      <isolated/>
+    </data-control-scope>
+    <return-value-definition id="__10">
+      <name>deptId</name>
+      <value>#{pageFlowScope.deptId}</value>
+      <class>java.lang.Integer</class>
+    </return-value-definition>
+    <managed-bean id="__11">
+      <managed-bean-name>deptBean</managed-bean-name>
+      <managed-bean-class>gov.makkah.view.beans.DeptBean</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <view id="DeptPage">
+      <page>/pages/CallTask/DeptPage.jspx</page>
+    </view>
+    <method-call id="CreateInsert1">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome>
+        <fixed-outcome>CreateInsert</fixed-outcome>
+      </outcome>
+    </method-call>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome>
+        <name>taskFlowReturn1</name>
+        <commit/>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="taskFlowReturn2">
+      <outcome>
+        <name>taskFlowReturn2</name>
+        <rollback/>
+      </outcome>
+    </task-flow-return>
+    <control-flow-rule id="__5">
+      <from-activity-id>CreateInsert1</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>CreateInsert</from-outcome>
+        <to-activity-id>DeptPage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id>DeptPage</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome>save</from-outcome>
+        <to-activity-id>taskFlowReturn1</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome>undo</from-outcome>
+        <to-activity-id>taskFlowReturn2</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

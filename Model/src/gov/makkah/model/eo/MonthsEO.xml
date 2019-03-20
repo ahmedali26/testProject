@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="MonthsEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="MONTHS"
+  AliasName="MonthsEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="MonthNo"
+    IsNotNull="true"
+    Precision="2"
+    Scale="0"
+    ColumnName="MONTH_NO"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="MONTHS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="BHejriName"
+    IsNotNull="true"
+    Precision="21"
+    ColumnName="B_HEJRI_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MONTHS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="21"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="BMeladiName"
+    IsNotNull="true"
+    Precision="21"
+    ColumnName="B_MELADI_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MONTHS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="21"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="SHejriName"
+    Precision="21"
+    ColumnName="S_HEJRI_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MONTHS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="21"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="SMeladiName"
+    Precision="21"
+    ColumnName="S_MELADI_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MONTHS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="21"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="MonthsMonthnoPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="MONTHS_MONTHNO_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.MonthsEO.MonthNo"/>
+    </AttrArray>
+  </Key>
+</Entity>

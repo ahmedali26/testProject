@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ActivitysInfoEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="ACTIVITYS_INFO"
+  AliasName="ActivitysInfoEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="ApplicationId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="APPLICATION_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="ACTIVITYS_INFO"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ModuleId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="MODULE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="ACTIVITYS_INFO"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ActivityId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="ACTIVITY_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="ACTIVITYS_INFO"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ActivityName"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="ACTIVITY_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ACTIVITYS_INFO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="NavigateName"
+    IsNotNull="true"
+    Precision="200"
+    ColumnName="NAVIGATE_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ACTIVITYS_INFO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Active"
+    Precision="1"
+    Scale="0"
+    ColumnName="ACTIVE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ACTIVITYS_INFO"/>
+  <Attribute
+    Name="CreatedBy"
+    Precision="10"
+    Scale="0"
+    ColumnName="CREATED_BY"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="ACTIVITYS_INFO"/>
+  <Attribute
+    Name="CreateDate"
+    ColumnName="CREATE_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="ACTIVITYS_INFO"/>
+  <Attribute
+    Name="LastUpdatedBy"
+    Precision="10"
+    Scale="0"
+    ColumnName="LAST_UPDATED_BY"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="ACTIVITYS_INFO"/>
+  <Attribute
+    Name="LastUpdatedDate"
+    ColumnName="LAST_UPDATED_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="ACTIVITYS_INFO"/>
+  <AccessorAttribute
+    Name="ModulesInfo"
+    Association="gov.makkah.model.ass.AppModMenActFkASS"
+    AssociationEnd="gov.makkah.model.ass.AppModMenActFkASS.ModulesInfo"
+    AssociationOtherEnd="gov.makkah.model.ass.AppModMenActFkASS.ActivitysInfo"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="RolesDetails"
+    Association="gov.makkah.model.ass.RolesDetailsFk1ASS"
+    AssociationEnd="gov.makkah.model.ass.RolesDetailsFk1ASS.RolesDetails"
+    AssociationOtherEnd="gov.makkah.model.ass.RolesDetailsFk1ASS.ActivitysInfo"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="AppModMenActPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="APP_MOD_MEN_ACT_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.ActivitysInfoEO.ApplicationId"/>
+      <Item Value="gov.makkah.model.eo.ActivitysInfoEO.ModuleId"/>
+      <Item Value="gov.makkah.model.eo.ActivitysInfoEO.ActivityId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="AppModMenaActidNn">
+    <DesignTime>
+      <Attr Name="_checkCondition" Value='"ACTIVITY_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="APP_MOD_MENA_ACTID_NN"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="AppModMenaActnaNn">
+    <DesignTime>
+      <Attr Name="_checkCondition" Value='"ACTIVITY_NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="APP_MOD_MENA_ACTNA_NN"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="AppModMenaAppidNn">
+    <DesignTime>
+      <Attr Name="_checkCondition" Value='"APPLICATION_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="APP_MOD_MENA_APPID_NN"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="AppModMenaModidNn">
+    <DesignTime>
+      <Attr Name="_checkCondition" Value='"MODULE_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="APP_MOD_MENA_MODID_NN"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="AppModMenaNavnaNn">
+    <DesignTime>
+      <Attr Name="_checkCondition" Value='"NAVIGATE_NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="APP_MOD_MENA_NAVNA_NN"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="AppModMenActFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="APP_MOD_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="APP_MOD_MEN_ACT_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.ActivitysInfoEO.ApplicationId"/>
+      <Item Value="gov.makkah.model.eo.ActivitysInfoEO.ModuleId"/>
+    </AttrArray>
+  </Key>
+</Entity>
