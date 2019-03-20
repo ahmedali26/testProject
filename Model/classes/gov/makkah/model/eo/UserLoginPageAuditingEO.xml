@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UserLoginPageAuditingEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="USER_LOGIN_PAGE_AUDITING"
+  AliasName="UserLoginPageAuditingEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="LoginId"
+    IsNotNull="true"
+    Precision="12"
+    Scale="0"
+    ColumnName="LOGIN_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_LOGIN_PAGE_AUDITING"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="UserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_LOGIN_PAGE_AUDITING"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="SystemId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="SYSTEM_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_LOGIN_PAGE_AUDITING"/>
+  <Attribute
+    Name="PageId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="PAGE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_LOGIN_PAGE_AUDITING"/>
+  <Attribute
+    Name="LoginDate"
+    ColumnName="LOGIN_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="USER_LOGIN_PAGE_AUDITING"/>
+  <AccessorAttribute
+    Name="UsersInfo"
+    Association="gov.makkah.model.ass.OginPageAuditingFkASS"
+    AssociationEnd="gov.makkah.model.ass.OginPageAuditingFkASS.UsersInfo"
+    AssociationOtherEnd="gov.makkah.model.ass.OginPageAuditingFkASS.UserLoginPageAuditing"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="LoginPageAuditingPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="LOGIN_PAGE_AUDITING_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UserLoginPageAuditingEO.LoginId"/>
+      <Item Value="gov.makkah.model.eo.UserLoginPageAuditingEO.UserId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="OginPageAuditingFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="USERS_MASTERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="OGIN_PAGE_AUDITING_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UserLoginPageAuditingEO.UserId"/>
+    </AttrArray>
+  </Key>
+</Entity>

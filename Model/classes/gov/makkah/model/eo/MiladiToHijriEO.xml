@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="MiladiToHijriEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="MILADI_TO_HIJRI"
+  AliasName="MiladiToHijriEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="MonthNo"
+    IsNotNull="true"
+    Precision="2"
+    Scale="0"
+    ColumnName="MONTH_NO"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="MILADI_TO_HIJRI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="HYear"
+    IsNotNull="true"
+    Precision="4"
+    Scale="0"
+    ColumnName="H_YEAR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="MILADI_TO_HIJRI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="MDate"
+    ColumnName="M_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="MILADI_TO_HIJRI"/>
+  <Key
+    Name="MiladiToHijriPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="MILADI_TO_HIJRI_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.MiladiToHijriEO.HYear"/>
+      <Item Value="gov.makkah.model.eo.MiladiToHijriEO.MonthNo"/>
+    </AttrArray>
+  </Key>
+</Entity>

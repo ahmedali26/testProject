@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UsersRolesEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="USERS_ROLES"
+  AliasName="UsersRolesEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="GrantId"
+    IsNotNull="true"
+    Precision="8"
+    Scale="0"
+    ColumnName="GRANT_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USERS_ROLES"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="UserId"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_ROLES"/>
+  <Attribute
+    Name="ApplicationId"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="APPLICATION_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_ROLES"/>
+  <Attribute
+    Name="RoleId"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="ROLE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_ROLES"/>
+  <Attribute
+    Name="Active"
+    Precision="1"
+    Scale="0"
+    ColumnName="ACTIVE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USERS_ROLES"/>
+  <Attribute
+    Name="CreatedBy"
+    Precision="10"
+    Scale="0"
+    ColumnName="CREATED_BY"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_ROLES"/>
+  <Attribute
+    Name="CreateDate"
+    ColumnName="CREATE_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="USERS_ROLES"/>
+  <Attribute
+    Name="LastUpdatedBy"
+    Precision="10"
+    Scale="0"
+    ColumnName="LAST_UPDATED_BY"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_ROLES"/>
+  <Attribute
+    Name="LastUpdatedDate"
+    ColumnName="LAST_UPDATED_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="USERS_ROLES"/>
+  <AccessorAttribute
+    Name="RolesMaster"
+    Association="gov.makkah.model.ass.UsersRolesFk1ASS"
+    AssociationEnd="gov.makkah.model.ass.UsersRolesFk1ASS.RolesMaster"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersRolesFk1ASS.UsersRoles"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="UsersInfo"
+    Association="gov.makkah.model.ass.UsersRolesFk2ASS"
+    AssociationEnd="gov.makkah.model.ass.UsersRolesFk2ASS.UsersInfo"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersRolesFk2ASS.UsersRoles"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="UsersRolesExceptions"
+    Association="gov.makkah.model.ass.UsersRolesExceptionsFk1ASS"
+    AssociationEnd="gov.makkah.model.ass.UsersRolesExceptionsFk1ASS.UsersRolesExceptions"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersRolesExceptionsFk1ASS.UsersRoles"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="UserRolesUnq">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USER_ROLES_UNQ"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersRolesEO.UserId"/>
+      <Item Value="gov.makkah.model.eo.UsersRolesEO.ApplicationId"/>
+      <Item Value="gov.makkah.model.eo.UsersRolesEO.RoleId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersRolesPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="USERS_ROLES_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersRolesEO.GrantId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersRolesFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="APP_ROLE_MASTER_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERS_ROLES_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersRolesEO.ApplicationId"/>
+      <Item Value="gov.makkah.model.eo.UsersRolesEO.RoleId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersRolesFk2">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="USERS_MASTERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERS_ROLES_FK2"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersRolesEO.UserId"/>
+    </AttrArray>
+  </Key>
+</Entity>

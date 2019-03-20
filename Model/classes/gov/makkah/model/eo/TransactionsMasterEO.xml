@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TransactionsMasterEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TRANSACTIONS_MASTER"
+  AliasName="TransactionsMasterEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="TransId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="TRANS_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_MASTER"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="TransMdate"
+    ColumnName="TRANS_MDATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TRANSACTIONS_MASTER"/>
+  <Attribute
+    Name="TransHdate"
+    Precision="10"
+    ColumnName="TRANS_HDATE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TRANSACTIONS_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ContractId"
+    Precision="30"
+    ColumnName="CONTRACT_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TRANSACTIONS_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DepartmentId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="DEPARTMENT_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_MASTER"/>
+  <Attribute
+    Name="ContractorId"
+    Precision="14"
+    Scale="0"
+    ColumnName="CONTRACTOR_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_MASTER"/>
+  <Attribute
+    Name="PaymentNo"
+    Precision="3"
+    Scale="0"
+    ColumnName="PAYMENT_NO"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_MASTER"/>
+  <Attribute
+    Name="TransType"
+    Precision="4"
+    Scale="0"
+    ColumnName="TRANS_TYPE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_MASTER"/>
+  <Attribute
+    Name="TransSubject"
+    Precision="500"
+    ColumnName="TRANS_SUBJECT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TRANSACTIONS_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PaymentIsLast"
+    Precision="1"
+    Scale="0"
+    ColumnName="PAYMENT_IS_LAST"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_MASTER"/>
+  <Attribute
+    Name="EmployeeId"
+    Precision="10"
+    Scale="0"
+    ColumnName="EMPLOYEE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_MASTER"/>
+  <Attribute
+    Name="CreatedBy"
+    Precision="10"
+    Scale="0"
+    ColumnName="CREATED_BY"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_MASTER"/>
+  <Attribute
+    Name="CreateDate"
+    ColumnName="CREATE_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TRANSACTIONS_MASTER"/>
+  <Attribute
+    Name="LastUpdatedBy"
+    Precision="10"
+    Scale="0"
+    ColumnName="LAST_UPDATED_BY"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_MASTER"/>
+  <Attribute
+    Name="LastUpdateDate"
+    ColumnName="LAST_UPDATE_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TRANSACTIONS_MASTER"/>
+  <Attribute
+    Name="TransComingNum"
+    Precision="30"
+    ColumnName="TRANS_COMING_NUM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TRANSACTIONS_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DocId"
+    Precision="6"
+    Scale="0"
+    ColumnName="DOC_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_MASTER"/>
+  <AccessorAttribute
+    Name="TransactionsInDetails"
+    Association="gov.makkah.model.ass.TransactionsInDetailsFkASS"
+    AssociationEnd="gov.makkah.model.ass.TransactionsInDetailsFkASS.TransactionsInDetails"
+    AssociationOtherEnd="gov.makkah.model.ass.TransactionsInDetailsFkASS.TransactionsMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="ContractsInfo"
+    Association="gov.makkah.model.ass.TransactionsMasterFk1ASS"
+    AssociationEnd="gov.makkah.model.ass.TransactionsMasterFk1ASS.ContractsInfo"
+    AssociationOtherEnd="gov.makkah.model.ass.TransactionsMasterFk1ASS.TransactionsMaster"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="LocationsInfo"
+    Association="gov.makkah.model.ass.TransactionsMasterFk2ASS"
+    AssociationEnd="gov.makkah.model.ass.TransactionsMasterFk2ASS.LocationsInfo"
+    AssociationOtherEnd="gov.makkah.model.ass.TransactionsMasterFk2ASS.TransactionsMaster"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="ContractorsMaster"
+    Association="gov.makkah.model.ass.TransactionsMasterFk3ASS"
+    AssociationEnd="gov.makkah.model.ass.TransactionsMasterFk3ASS.ContractorsMaster"
+    AssociationOtherEnd="gov.makkah.model.ass.TransactionsMasterFk3ASS.TransactionsMaster"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TransactionsMasterDoc"
+    Association="gov.makkah.model.ass.TransactionsMasterDocFkASS"
+    AssociationEnd="gov.makkah.model.ass.TransactionsMasterDocFkASS.TransactionsMasterDoc"
+    AssociationOtherEnd="gov.makkah.model.ass.TransactionsMasterDocFkASS.TransactionsMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TransactionsMasterDoc2"
+    Association="gov.makkah.model.ass.TransactionsMasterDoc2FkASS"
+    AssociationEnd="gov.makkah.model.ass.TransactionsMasterDoc2FkASS.TransactionsMasterDoc2"
+    AssociationOtherEnd="gov.makkah.model.ass.TransactionsMasterDoc2FkASS.TransactionsMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TransactionsOutDetails"
+    Association="gov.makkah.model.ass.TransactionsOutDetailsFkASS"
+    AssociationEnd="gov.makkah.model.ass.TransactionsOutDetailsFkASS.TransactionsOutDetails"
+    AssociationOtherEnd="gov.makkah.model.ass.TransactionsOutDetailsFkASS.TransactionsMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TransactionsProcedures"
+    Association="gov.makkah.model.ass.TransactionsProceduresFkASS"
+    AssociationEnd="gov.makkah.model.ass.TransactionsProceduresFkASS.TransactionsProcedures"
+    AssociationOtherEnd="gov.makkah.model.ass.TransactionsProceduresFkASS.TransactionsMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TransactionsProcedureRequier"
+    Association="gov.makkah.model.ass.TprFkASS"
+    AssociationEnd="gov.makkah.model.ass.TprFkASS.TransactionsProcedureRequier"
+    AssociationOtherEnd="gov.makkah.model.ass.TprFkASS.TransactionsMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="TransactionsMasterPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="TRANSACTIONS_MASTER_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.TransactionsMasterEO.TransId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TransactionsMasterFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="CONTRACTS_INFO_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TRANSACTIONS_MASTER_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.TransactionsMasterEO.ContractId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TransactionsMasterFk2">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="LOCATIONS_INFO_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TRANSACTIONS_MASTER_FK2"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.TransactionsMasterEO.DepartmentId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TransactionsMasterFk3">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_CONTRACTORS_MASTER"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TRANSACTIONS_MASTER_FK3"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.TransactionsMasterEO.ContractorId"/>
+    </AttrArray>
+  </Key>
+</Entity>

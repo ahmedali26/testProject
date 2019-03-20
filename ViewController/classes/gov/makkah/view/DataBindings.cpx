@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.9.14" id="DataBindings"
+             SeparateXMLFiles="false" Package="gov.makkah.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/pages/testSking/Test1.jspx" usageId="gov_makkah_view_Test1PageDef"/>
+    <page path="/taskflows/deptTask.xml#task-flow-definition@CreateInsert1"
+          usageId="gov_makkah_view_deptTask_task_flow_definition_CreateInsert1PageDef"/>
+    <page path="/pages/CallTask/DeptPage.jsf" usageId="gov_makkah_view_DeptPagePageDef"/>
+    <page path="/pages/CallTask/DeptPage.jspx" usageId="gov_makkah_view_DeptPagePageDef1"/>
+    <page path="/pages/CallTask/EmpPage.jspx" usageId="gov_makkah_view_EmpPagePageDef"/>
+    <page path="/pages/contextEventExampl/deptForContEvent.jsff" usageId="gov_makkah_view_deptForContEventPageDef"/>
+    <page path="/pages/contextEventExampl/EmpForContEvent.jsff" usageId="gov_makkah_view_EmpForContEventPageDef"/>
+    <page path="/pages/contextEventExampl/ContextEventExample.jspx"
+          usageId="gov_makkah_view_ContextEventExamplePageDef"/>
+    <page path="/pages/hijriDate/untitled1.jspx" usageId="gov_makkah_view_untitled1PageDef"/>
+    <page path="/pages/hijriDate/untitled2.jspx" usageId="gov_makkah_view_untitled2PageDef"/>
+    <page path="/pages/pollTestPage.jspx" usageId="gov_makkah_view_pollTestPagePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="gov_makkah_view_Test1PageDef" path="pages.testSking.Test1PageDef"/>
+    <page id="gov_makkah_view_deptTask_task_flow_definition_CreateInsert1PageDef"
+          path="taskflows.deptTask_task_flow_definition_CreateInsert1PageDef"/>
+    <page id="gov_makkah_view_DeptPagePageDef" path="pages.CallTask.DeptPagePageDef"/>
+    <page id="gov_makkah_view_DeptPagePageDef1" path="pages.CallTask.DeptPagePageDef1"/>
+    <page id="gov_makkah_view_EmpPagePageDef" path="pages.CallTask.EmpPagePageDef"/>
+    <page id="gov_makkah_view_deptForContEventPageDef" path="pages.contextEventExampl.deptForContEventPageDef"/>
+    <page id="gov_makkah_view_EmpForContEventPageDef" path="pages.contextEventExampl.EmpForContEventPageDef"/>
+    <page id="gov_makkah_view_ContextEventExamplePageDef" path="pages.contextEventExampl.ContextEventExamplePageDef"/>
+    <page id="gov_makkah_view_untitled1PageDef" path="pages.hijriDate.untitled1PageDef"/>
+    <page id="gov_makkah_view_untitled2PageDef" path="pages.hijriDate.untitled2PageDef"/>
+    <page id="gov_makkah_view_pollTestPagePageDef" path="pages.pollTestPagePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="testAMDataControl" Package="gov.makkah.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="testAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="ContextEventExamplePageDef"
+                Package="pages.contextEventExampl">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="deptForContextEventFlow1"
+              taskFlowId="/taskflows/conextevent/deptForContextEvent-Flow.xml#deptForContextEvent-Flow"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="empForContEventflow1"
+              taskFlowId="/taskflows/conextevent/empForContEvent-flow.xml#empForContEvent-flow" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings>
+    <methodAction id="setEmpDeptWithParm" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="setEmpDeptWithParm" IsViewObjectMethod="false" DataControl="testAMDataControl"
+                  InstanceName="bindings.setEmpDeptWithParm.dataControl.dataProvider">
+      <NamedData NDName="_deptId" NDType="java.lang.Integer"/>
+    </methodAction>
+  </bindings>
+  <eventMap xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+    <event name="deptEvent">
+      <producer region="deptForContextEventFlow1.deptForContEventPageDef.Departments20">
+        <consumer region="" handler="setEmpDeptWithParm">
+          <parameters>
+            <parameter name="pDeptId" value="#{payLoad}"/>
+          </parameters>
+        </consumer>
+      </producer>
+    </event>
+  </eventMap>
+</pageDefinition>

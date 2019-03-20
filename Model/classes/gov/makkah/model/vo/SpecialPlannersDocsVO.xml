@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SpecialPlannersDocsVO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  RowClass="gov.makkah.share.CustomizeViewRowImpl"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="SpecialPlannersDocsEO"
+    Entity="gov.makkah.model.eo.SpecialPlannersDocsEO"/>
+  <ViewAttribute
+    Name="DocId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="DocId"
+    EntityUsage="SpecialPlannersDocsEO"
+    AliasName="DOC_ID"/>
+  <ViewAttribute
+    Name="FileId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="FileId"
+    EntityUsage="SpecialPlannersDocsEO"
+    AliasName="FILE_ID"/>
+  <ViewAttribute
+    Name="FileName"
+    PrecisionRule="true"
+    EntityAttrName="FileName"
+    EntityUsage="SpecialPlannersDocsEO"
+    AliasName="FILE_NAME"/>
+  <ViewAttribute
+    Name="FilePath"
+    PrecisionRule="true"
+    EntityAttrName="FilePath"
+    EntityUsage="SpecialPlannersDocsEO"
+    AliasName="FILE_PATH"/>
+  <ViewAttribute
+    Name="ContentType"
+    PrecisionRule="true"
+    EntityAttrName="ContentType"
+    EntityUsage="SpecialPlannersDocsEO"
+    AliasName="CONTENT_TYPE"/>
+  <ViewAttribute
+    Name="FileDesc"
+    PrecisionRule="true"
+    EntityAttrName="FileDesc"
+    EntityUsage="SpecialPlannersDocsEO"
+    AliasName="FILE_DESC"/>
+</ViewObject>

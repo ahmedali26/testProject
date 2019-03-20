@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="OrdersMasterEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="ORDERS_MASTER"
+  AliasName="OrdersMasterEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="OrderMId"
+    IsNotNull="true"
+    Precision="5"
+    Scale="0"
+    ColumnName="ORDER_M_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ORDERS_MASTER"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="OrderDate"
+    ColumnName="ORDER_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="ORDERS_MASTER"/>
+  <Attribute
+    Name="Paymenttype"
+    Precision="3"
+    Scale="0"
+    ColumnName="PAYMENTTYPE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ORDERS_MASTER"/>
+  <Attribute
+    Name="PaymentDetails"
+    Precision="8"
+    ColumnName="PAYMENT_DETAILS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ORDERS_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="5"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="OrdersDetails"
+    Association="gov.makkah.model.orders.ass.OrdersDetailsFk1ASS"
+    AssociationEnd="gov.makkah.model.orders.ass.OrdersDetailsFk1ASS.OrdersDetails"
+    AssociationOtherEnd="gov.makkah.model.orders.ass.OrdersDetailsFk1ASS.OrdersMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="OrdersMasterPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="ORDERS_MASTER_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.orders.eo.OrdersMasterEO.OrderMId"/>
+    </AttrArray>
+  </Key>
+</Entity>

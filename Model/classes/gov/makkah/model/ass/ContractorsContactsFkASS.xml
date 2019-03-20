@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ContractorsContactsFkASS"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="ContractorsMaster"
+    Cardinality="1"
+    Source="true"
+    Owner="gov.makkah.model.eo.ContractorsMasterEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="ContractorsMaster"/>
+      <Attr Name="_foreignKey" Value="gov.makkah.model.eo.ContractorsMasterEO.PkContractorsMaster"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.ContractorsMasterEO.ContractorId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="ContractorsContacts"
+    Cardinality="-1"
+    Owner="gov.makkah.model.eo.ContractorsContactsEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="ContractorsContacts"/>
+      <Attr Name="_foreignKey" Value="gov.makkah.model.eo.ContractorsContactsEO.ContractorsContactsFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.ContractorsContactsEO.ContractorId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UsersChatMessagesEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="USERS_CHAT_MESSAGES"
+  AliasName="UsersChatMessagesEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="MessageId"
+    IsNotNull="true"
+    Precision="12"
+    Scale="0"
+    ColumnName="MESSAGE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_CHAT_MESSAGES"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="FromUserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="FROM_USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_CHAT_MESSAGES"/>
+  <Attribute
+    Name="MessageMdate"
+    ColumnName="MESSAGE_MDATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="USERS_CHAT_MESSAGES"/>
+  <Attribute
+    Name="MessageHdate"
+    Precision="10"
+    ColumnName="MESSAGE_HDATE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_CHAT_MESSAGES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MessageTitle"
+    IsNotNull="true"
+    Precision="200"
+    ColumnName="MESSAGE_TITLE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_CHAT_MESSAGES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ToUserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="TO_USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_CHAT_MESSAGES"/>
+  <Attribute
+    Name="MessageSbject"
+    IsNotNull="true"
+    Precision="2000"
+    ColumnName="MESSAGE_SBJECT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_CHAT_MESSAGES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="2000"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ReadStatus"
+    Precision="1"
+    Scale="0"
+    ColumnName="READ_STATUS"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USERS_CHAT_MESSAGES"/>
+  <Attribute
+    Name="ReadMdate"
+    ColumnName="READ_MDATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="USERS_CHAT_MESSAGES"/>
+  <Attribute
+    Name="ReplayToId"
+    Precision="12"
+    Scale="0"
+    ColumnName="REPLAY_TO_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_CHAT_MESSAGES"/>
+  <AccessorAttribute
+    Name="UsersChatMessages"
+    Association="gov.makkah.model.ass.UsersChatMessagesFkASS"
+    AssociationEnd="gov.makkah.model.ass.UsersChatMessagesFkASS.UsersChatMessages"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersChatMessagesFkASS.ReplayToIdUsersChatMessages"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="ReplayToIdUsersChatMessages"
+    Association="gov.makkah.model.ass.UsersChatMessagesFkASS"
+    AssociationEnd="gov.makkah.model.ass.UsersChatMessagesFkASS.ReplayToIdUsersChatMessages"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersChatMessagesFkASS.UsersChatMessages"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="UsersInfo"
+    Association="gov.makkah.model.ass.UsersChatMessagesFk2ASS"
+    AssociationEnd="gov.makkah.model.ass.UsersChatMessagesFk2ASS.UsersInfo"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersChatMessagesFk2ASS.UsersChatMessages"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="UsersInfo1"
+    Association="gov.makkah.model.ass.UsersChatMessagesFk1ASS"
+    AssociationEnd="gov.makkah.model.ass.UsersChatMessagesFk1ASS.UsersInfo1"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersChatMessagesFk1ASS.UsersChatMessages1"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="UsersChatMessagesPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="USERS_CHAT_MESSAGES_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersChatMessagesEO.MessageId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersChatMessagesFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="USERS_CHAT_MESSAGES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERS_CHAT_MESSAGES_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersChatMessagesEO.ReplayToId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersChatMessagesFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="USERS_MASTERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERS_CHAT_MESSAGES_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersChatMessagesEO.FromUserId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersChatMessagesFk2">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="USERS_MASTERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERS_CHAT_MESSAGES_FK2"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersChatMessagesEO.ToUserId"/>
+    </AttrArray>
+  </Key>
+</Entity>

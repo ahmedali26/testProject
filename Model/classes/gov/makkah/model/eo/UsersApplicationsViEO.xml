@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UsersApplicationsViEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="USERS_APPLICATIONS_VI"
+  AliasName="UsersApplicationsViEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="UserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_APPLICATIONS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="LoginName"
+    Precision="4000"
+    ColumnName="LOGIN_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_APPLICATIONS_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4000"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ApplicationId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="APPLICATION_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_APPLICATIONS_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ApplicationName"
+    Precision="4000"
+    ColumnName="APPLICATION_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS_APPLICATIONS_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4000"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="UsersapplicationsvieoPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="USERSAPPLICATIONSVIEO_PRIMARY_"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersApplicationsViEO.UserId"/>
+      <Item Value="gov.makkah.model.eo.UsersApplicationsViEO.LoginName"/>
+      <Item Value="gov.makkah.model.eo.UsersApplicationsViEO.ApplicationId"/>
+      <Item Value="gov.makkah.model.eo.UsersApplicationsViEO.ApplicationName"/>
+    </AttrArray>
+  </Key>
+</Entity>

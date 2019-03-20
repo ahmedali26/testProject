@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UsersImagesEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="USERS_IMAGES"
+  AliasName="UsersImagesEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="UserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_IMAGES"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="UserImage"
+    IsQueriable="false"
+    ColumnName="USER_IMAGE"
+    SQLType="BLOB"
+    Type="oracle.jbo.domain.BlobDomain"
+    ColumnType="BLOB"
+    TableName="USERS_IMAGES"/>
+  <AccessorAttribute
+    Name="UsersInfo"
+    Association="gov.makkah.model.ass.UsersImagesFkASS"
+    AssociationEnd="gov.makkah.model.ass.UsersImagesFkASS.UsersInfo"
+    AssociationOtherEnd="gov.makkah.model.ass.UsersImagesFkASS.UsersImages"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="UsersImagesPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="USERS_IMAGES_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersImagesEO.UserId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersImagesFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="USERS_MASTERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERS_IMAGES_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UsersImagesEO.UserId"/>
+    </AttrArray>
+  </Key>
+</Entity>

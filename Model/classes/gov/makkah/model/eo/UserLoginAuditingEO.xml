@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UserLoginAuditingEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="USER_LOGIN_AUDITING"
+  AliasName="UserLoginAuditingEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="LoginId"
+    IsNotNull="true"
+    Precision="12"
+    Scale="0"
+    ColumnName="LOGIN_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_LOGIN_AUDITING"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="UserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_LOGIN_AUDITING"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="LoginDate"
+    ColumnName="LOGIN_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="USER_LOGIN_AUDITING"/>
+  <AccessorAttribute
+    Name="UsersInfo"
+    Association="gov.makkah.model.ass.UserLoginAuditingFkASS"
+    AssociationEnd="gov.makkah.model.ass.UserLoginAuditingFkASS.UsersInfo"
+    AssociationOtherEnd="gov.makkah.model.ass.UserLoginAuditingFkASS.UserLoginAuditing"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="UserLoginAuditingPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="USER_LOGIN_AUDITING_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UserLoginAuditingEO.LoginId"/>
+      <Item Value="gov.makkah.model.eo.UserLoginAuditingEO.UserId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UserLoginAuditingFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="USERS_MASTERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USER_LOGIN_AUDITING_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UserLoginAuditingEO.UserId"/>
+    </AttrArray>
+  </Key>
+</Entity>

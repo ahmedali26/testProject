@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UsersRolesFk2VL"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  EntityAssociation="gov.makkah.model.ass.UsersRolesFk2ASS">
+  <ViewLinkDefEnd
+    Name="UsersInfo"
+    Cardinality="1"
+    Source="true"
+    Owner="gov.makkah.model.vo.UsersInfoVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="UsersInfo"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.vo.UsersInfoVO.UserId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="UsersRoles"
+    Cardinality="-1"
+    Owner="gov.makkah.model.vo.UsersRolesVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="UsersRoles"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.vo.UsersRolesVO.UserId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

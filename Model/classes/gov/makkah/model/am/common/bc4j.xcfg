@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!---->
+<BC4JConfig xmlns="http://xmlns.oracle.com/bc4j/configuration" version="11.1">
+  <AppModuleConfigBag ApplicationName="gov.makkah.model.am.testAM">
+    <AppModuleConfig name="testAMLocal" jbo.project="gov.makkah.model.Model"
+                     ApplicationName="gov.makkah.model.am.testAM" DeployPlatform="LOCAL">
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/HRDS"/>
+      <Security AppModuleJndiName="gov.makkah.model.am.testAM"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="testAMShared" jbo.project="gov.makkah.model.Model"
+                     ApplicationName="gov.makkah.model.am.testAM" DeployPlatform="LOCAL">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/HRDS"/>
+      <Security AppModuleJndiName="gov.makkah.model.am.testAM"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+  <AppModuleConfigBag ApplicationName="gov.makkah.model.am.secAM">
+    <AppModuleConfig name="secAMLocal" jbo.project="gov.makkah.model.Model" ApplicationName="gov.makkah.model.am.secAM"
+                     DeployPlatform="LOCAL">
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/AutodocDS"/>
+      <Security AppModuleJndiName="gov.makkah.model.am.secAM"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="secAMShared" jbo.project="gov.makkah.model.Model" ApplicationName="gov.makkah.model.am.secAM"
+                     DeployPlatform="LOCAL">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/AutodocDS"/>
+      <Security AppModuleJndiName="gov.makkah.model.am.secAM"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+</BC4JConfig>

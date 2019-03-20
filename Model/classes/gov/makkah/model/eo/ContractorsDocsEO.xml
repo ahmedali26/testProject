@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ContractorsDocsEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="CONTRACTORS_DOCS"
+  AliasName="ContractorsDocsEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="ContractorId"
+    IsNotNull="true"
+    Precision="14"
+    Scale="0"
+    ColumnName="CONTRACTOR_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CONTRACTORS_DOCS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="FileId"
+    IsNotNull="true"
+    Precision="4"
+    Scale="0"
+    ColumnName="FILE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="CONTRACTORS_DOCS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="FileName"
+    Precision="100"
+    ColumnName="FILE_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CONTRACTORS_DOCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FilePath"
+    Precision="1000"
+    ColumnName="FILE_PATH"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CONTRACTORS_DOCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1000"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ContentType"
+    Precision="500"
+    ColumnName="CONTENT_TYPE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CONTRACTORS_DOCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FileDesc"
+    Precision="1000"
+    ColumnName="FILE_DESC"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CONTRACTORS_DOCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1000"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="ContractorsMaster"
+    Association="gov.makkah.model.ass.ContractorsDocsFkASS"
+    AssociationEnd="gov.makkah.model.ass.ContractorsDocsFkASS.ContractorsMaster"
+    AssociationOtherEnd="gov.makkah.model.ass.ContractorsDocsFkASS.ContractorsDocs"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="ContractorsDocsPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="CONTRACTORS_DOCS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.ContractorsDocsEO.ContractorId"/>
+      <Item Value="gov.makkah.model.eo.ContractorsDocsEO.FileId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ContractorsDocsFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_CONTRACTORS_MASTER"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CONTRACTORS_DOCS_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.ContractorsDocsEO.ContractorId"/>
+    </AttrArray>
+  </Key>
+</Entity>

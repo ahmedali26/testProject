@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="gov.makkah.model.orders.am.testAM">
+      <AppModuleConfig name="16639B1889E" JDBCName="HR" DeployPlatform="LOCAL" jbo.project="gov.makkah.model.Model" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="testAMLocal" ApplicationName="gov.makkah.model.orders.am.testAM" DBconnection="java:comp/env/jdbc/HRDS">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/HRDS" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="gov.makkah.model.orders.am.testAM"/>
+         <Tester FullProxyInterfaceName="gov.makkah.model.orders.am.common.testAM"/>
+         <Custom ns0:tester_classloader_enabled="true" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

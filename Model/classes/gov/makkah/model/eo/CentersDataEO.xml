@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CentersDataEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="CENTERS_DATA"
+  AliasName="CentersDataEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="LocationId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="LOCATION_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CENTERS_DATA"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="SubLocationId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="SUB_LOCATION_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CENTERS_DATA"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ProvinceId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="PROVINCE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CENTERS_DATA"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="CenterId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="CENTER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CENTERS_DATA"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="CenterNameAr"
+    IsNotNull="true"
+    Precision="200"
+    ColumnName="CENTER_NAME_AR"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CENTERS_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CenterNameEn"
+    Precision="200"
+    ColumnName="CENTER_NAME_EN"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CENTERS_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="CampsData"
+    Association="gov.makkah.model.ass.CampsDataFkASS"
+    AssociationEnd="gov.makkah.model.ass.CampsDataFkASS.CampsData"
+    AssociationOtherEnd="gov.makkah.model.ass.CampsDataFkASS.CentersData"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="ProvincesData"
+    Association="gov.makkah.model.ass.CentersDataFkASS"
+    AssociationEnd="gov.makkah.model.ass.CentersDataFkASS.ProvincesData"
+    AssociationOtherEnd="gov.makkah.model.ass.CentersDataFkASS.CentersData"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="CentersDataPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="CENTERS_DATA_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.CentersDataEO.LocationId"/>
+      <Item Value="gov.makkah.model.eo.CentersDataEO.SubLocationId"/>
+      <Item Value="gov.makkah.model.eo.CentersDataEO.ProvinceId"/>
+      <Item Value="gov.makkah.model.eo.CentersDataEO.CenterId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CentersDataFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PROVINCES_DATA_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CENTERS_DATA_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.CentersDataEO.LocationId"/>
+      <Item Value="gov.makkah.model.eo.CentersDataEO.SubLocationId"/>
+      <Item Value="gov.makkah.model.eo.CentersDataEO.ProvinceId"/>
+    </AttrArray>
+  </Key>
+</Entity>

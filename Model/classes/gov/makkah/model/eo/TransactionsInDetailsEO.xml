@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TransactionsInDetailsEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TRANSACTIONS_IN_DETAILS"
+  AliasName="TransactionsInDetailsEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="TransId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="TRANS_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_IN_DETAILS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="TransIdId"
+    IsNotNull="true"
+    Precision="3"
+    Scale="0"
+    ColumnName="TRANS_ID_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_IN_DETAILS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="TransIdMdate"
+    ColumnName="TRANS_ID_MDATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TRANSACTIONS_IN_DETAILS"/>
+  <Attribute
+    Name="TransIdHdate"
+    Precision="10"
+    ColumnName="TRANS_ID_HDATE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TRANSACTIONS_IN_DETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="EmployeeId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="EMPLOYEE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_IN_DETAILS"/>
+  <Attribute
+    Name="RecevedFlag"
+    Precision="1"
+    Scale="0"
+    ColumnName="RECEVED_FLAG"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_IN_DETAILS"/>
+  <Attribute
+    Name="RecevedMdate"
+    ColumnName="RECEVED_MDATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TRANSACTIONS_IN_DETAILS"/>
+  <Attribute
+    Name="RecevedHdate"
+    Precision="10"
+    ColumnName="RECEVED_HDATE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TRANSACTIONS_IN_DETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TransIdNots"
+    Precision="500"
+    ColumnName="TRANS_ID_NOTS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TRANSACTIONS_IN_DETAILS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedBy"
+    Precision="10"
+    Scale="0"
+    ColumnName="CREATED_BY"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_IN_DETAILS"/>
+  <Attribute
+    Name="CreateDate"
+    ColumnName="CREATE_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TRANSACTIONS_IN_DETAILS"/>
+  <Attribute
+    Name="LastUpdatedBy"
+    Precision="10"
+    Scale="0"
+    ColumnName="LAST_UPDATED_BY"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TRANSACTIONS_IN_DETAILS"/>
+  <Attribute
+    Name="LastUpdateDate"
+    ColumnName="LAST_UPDATE_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TRANSACTIONS_IN_DETAILS"/>
+  <AccessorAttribute
+    Name="TransactionsMaster"
+    Association="gov.makkah.model.ass.TransactionsInDetailsFkASS"
+    AssociationEnd="gov.makkah.model.ass.TransactionsInDetailsFkASS.TransactionsMaster"
+    AssociationOtherEnd="gov.makkah.model.ass.TransactionsInDetailsFkASS.TransactionsInDetails"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="TransactionsInDetailsPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="TRANSACTIONS_IN_DETAILS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.TransactionsInDetailsEO.TransId"/>
+      <Item Value="gov.makkah.model.eo.TransactionsInDetailsEO.TransIdId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TransactionsInDetailsFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="TRANSACTIONS_MASTER_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TRANSACTIONS_IN_DETAILS_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.TransactionsInDetailsEO.TransId"/>
+    </AttrArray>
+  </Key>
+</Entity>

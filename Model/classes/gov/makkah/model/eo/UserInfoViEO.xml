@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UserInfoViEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="USER_INFO_VI"
+  AliasName="UserInfoViEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="UserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="UserName"
+    IsNotNull="true"
+    Precision="400"
+    ColumnName="USER_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="400"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LoginName"
+    Precision="100"
+    ColumnName="LOGIN_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MainDeptid"
+    Precision="10"
+    Scale="0"
+    ColumnName="MAIN_DEPTID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="MainDeptName"
+    Precision="200"
+    ColumnName="MAIN_DEPT_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="SubDeptid"
+    Precision="10"
+    Scale="0"
+    ColumnName="SUB_DEPTID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="SubDeptName"
+    Precision="200"
+    ColumnName="SUB_DEPT_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="JobId"
+    Precision="4"
+    Scale="0"
+    ColumnName="JOB_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="JobName"
+    Precision="200"
+    ColumnName="JOB_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PhoneNum"
+    Precision="10"
+    ColumnName="PHONE_NUM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Extntion"
+    Precision="5"
+    Scale="0"
+    ColumnName="EXTNTION"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="FaxNumber"
+    Precision="10"
+    ColumnName="FAX_NUMBER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MobileNum"
+    Precision="10"
+    ColumnName="MOBILE_NUM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UserPassword"
+    Precision="500"
+    ColumnName="USER_PASSWORD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="WorkEmail"
+    Precision="200"
+    ColumnName="WORK_EMAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="YahooMail"
+    Precision="200"
+    ColumnName="YAHOO_MAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="GoogleMail"
+    Precision="200"
+    ColumnName="GOOGLE_MAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Facebook"
+    Precision="500"
+    ColumnName="FACEBOOK"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Likedin"
+    Precision="500"
+    ColumnName="LIKEDIN"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UserType"
+    Precision="4"
+    Scale="0"
+    ColumnName="USER_TYPE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="DefualtLang"
+    Precision="1"
+    Scale="0"
+    ColumnName="DEFUALT_LANG"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Active"
+    Precision="1"
+    Scale="0"
+    ColumnName="ACTIVE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USER_INFO_VI"
+    PrimaryKey="true"/>
+  <Key
+    Name="UserinfovieoPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="USERINFOVIEO_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.UserId"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.UserName"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.LoginName"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.MainDeptid"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.MainDeptName"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.SubDeptid"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.SubDeptName"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.JobId"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.JobName"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.PhoneNum"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.Extntion"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.FaxNumber"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.MobileNum"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.UserPassword"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.WorkEmail"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.YahooMail"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.GoogleMail"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.Facebook"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.Likedin"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.UserType"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.DefualtLang"/>
+      <Item Value="gov.makkah.model.eo.UserInfoViEO.Active"/>
+    </AttrArray>
+  </Key>
+</Entity>

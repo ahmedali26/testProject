@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="YearsMasterEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="YEARS_MASTER"
+  AliasName="YearsMasterEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="HejryYear"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="4"
+    Scale="0"
+    ColumnName="HEJRY_YEAR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="YEARS_MASTER"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="MildyYear"
+    IsUnique="true"
+    Precision="4"
+    Scale="0"
+    ColumnName="MILDY_YEAR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="YEARS_MASTER"/>
+  <Attribute
+    Name="YearDesc"
+    Precision="9"
+    ColumnName="YEAR_DESC"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="YEARS_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="9"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="HejrySdate"
+    Precision="10"
+    ColumnName="HEJRY_SDATE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="YEARS_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="HejryEdate"
+    Precision="10"
+    ColumnName="HEJRY_EDATE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="YEARS_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ActivStatus"
+    Precision="1"
+    Scale="0"
+    ColumnName="ACTIV_STATUS"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="YEARS_MASTER"/>
+  <Key
+    Name="YearsMasterPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="YEARS_MASTER_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.YearsMasterEO.HejryYear"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="YearsMasterUnq">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="YEARS_MASTER_UNQ"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.YearsMasterEO.HejryYear"/>
+      <Item Value="gov.makkah.model.eo.YearsMasterEO.MildyYear"/>
+    </AttrArray>
+  </Key>
+</Entity>

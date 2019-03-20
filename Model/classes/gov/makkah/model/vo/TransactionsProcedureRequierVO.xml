@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TransactionsProcedureRequierVO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  RowClass="gov.makkah.share.CustomizeViewRowImpl"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="TransactionsProcedureRequier1"
+    Entity="gov.makkah.model.eo.TransactionsProcedureRequierEO"/>
+  <ViewAttribute
+    Name="TransId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="TransId"
+    EntityUsage="TransactionsProcedureRequier1"
+    AliasName="TRANS_ID"/>
+  <ViewAttribute
+    Name="ItemId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ItemId"
+    EntityUsage="TransactionsProcedureRequier1"
+    AliasName="ITEM_ID"/>
+  <ViewAttribute
+    Name="DocId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="DocId"
+    EntityUsage="TransactionsProcedureRequier1"
+    AliasName="DOC_ID"/>
+  <ViewAttribute
+    Name="DigitalCopy"
+    PrecisionRule="true"
+    EntityAttrName="DigitalCopy"
+    EntityUsage="TransactionsProcedureRequier1"
+    AliasName="DIGITAL_COPY"/>
+  <ViewAttribute
+    Name="GisFiles"
+    PrecisionRule="true"
+    EntityAttrName="GisFiles"
+    EntityUsage="TransactionsProcedureRequier1"
+    AliasName="GIS_FILES"/>
+  <ViewAttribute
+    Name="CadFile"
+    PrecisionRule="true"
+    EntityAttrName="CadFile"
+    EntityUsage="TransactionsProcedureRequier1"
+    AliasName="CAD_FILE"/>
+</ViewObject>

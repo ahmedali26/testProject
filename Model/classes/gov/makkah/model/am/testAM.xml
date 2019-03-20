@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="testAM"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  ComponentClass="gov.makkah.model.am.testAMImpl"
+  ClearCacheOnRollback="true"
+  ComponentInterface="gov.makkah.model.am.common.testAM">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewUsage
+    Name="Departments1"
+    ViewObjectName="gov.makkah.model.vo.DepartmentsVO"/>
+  <ViewUsage
+    Name="Employees1"
+    ViewObjectName="gov.makkah.model.vo.EmployeesVO"/>
+  <ViewUsage
+    Name="Departments2"
+    ViewObjectName="gov.makkah.model.vo.DepartmentsVO"/>
+  <ViewUsage
+    Name="Employees2"
+    ViewObjectName="gov.makkah.model.vo.EmployeesVO"/>
+  <ViewUsage
+    Name="EmpWithPram1"
+    ViewObjectName="gov.makkah.model.vo.EmpWithPram"/>
+  <ViewLinkUsage
+    Name="EmpDeptFkVL1"
+    ViewLinkObjectName="gov.makkah.model.vl.EmpDeptFkVL"
+    SrcViewUsageName="gov.makkah.model.am.testAM.Departments1"
+    DstViewUsageName="gov.makkah.model.am.testAM.Employees1"
+    Reversed="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="setEmpDeptWithParm"
+      MethodName="setEmpDeptWithParm">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="_deptId"
+        Type="java.lang.Integer"/>
+    </Method>
+    <Method
+      Name="setEmpDeptWithParm"
+      MethodName="setEmpDeptWithParm">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="_deptId"
+        Type="java.lang.Integer"/>
+    </Method>
+  </ClientInterface>
+</AppModule>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CampsDataEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="CAMPS_DATA"
+  AliasName="CampsDataEO"
+  BindingStyle="OracleName"
+  RowClass="gov.makkah.share.CustomizeEntityImpl">
+  <Attribute
+    Name="LocationId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="LOCATION_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CAMPS_DATA"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="SubLocationId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="SUB_LOCATION_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CAMPS_DATA"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ProvinceId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="PROVINCE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CAMPS_DATA"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="CenterId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="CENTER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CAMPS_DATA"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="CampId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="CAMP_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CAMPS_DATA"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="CampNameAr"
+    Precision="400"
+    ColumnName="CAMP_NAME_AR"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CAMPS_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="400"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CampNameEn"
+    Precision="400"
+    ColumnName="CAMP_NAME_EN"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CAMPS_DATA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="400"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="CentersData"
+    Association="gov.makkah.model.ass.CampsDataFkASS"
+    AssociationEnd="gov.makkah.model.ass.CampsDataFkASS.CentersData"
+    AssociationOtherEnd="gov.makkah.model.ass.CampsDataFkASS.CampsData"
+    Type="gov.makkah.share.CustomizeEntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="CampsDataPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="CAMPS_DATA_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.CampsDataEO.LocationId"/>
+      <Item Value="gov.makkah.model.eo.CampsDataEO.SubLocationId"/>
+      <Item Value="gov.makkah.model.eo.CampsDataEO.ProvinceId"/>
+      <Item Value="gov.makkah.model.eo.CampsDataEO.CenterId"/>
+      <Item Value="gov.makkah.model.eo.CampsDataEO.CampId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CampsDataFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="CENTERS_DATA_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CAMPS_DATA_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gov.makkah.model.eo.CampsDataEO.LocationId"/>
+      <Item Value="gov.makkah.model.eo.CampsDataEO.SubLocationId"/>
+      <Item Value="gov.makkah.model.eo.CampsDataEO.ProvinceId"/>
+      <Item Value="gov.makkah.model.eo.CampsDataEO.CenterId"/>
+    </AttrArray>
+  </Key>
+</Entity>
