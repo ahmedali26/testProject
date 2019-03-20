@@ -8,7 +8,11 @@
             <af:form id="f1">
                 <af:panelCollection id="pc1">
                     <f:facet name="menus"/>
-                    <f:facet name="toolbar"/>
+                    <f:facet name="toolbar">
+                        <af:toolbar id="t2">
+                            <af:button text="button 1" id="b1"/>
+                        </af:toolbar>
+                    </f:facet>
                     <f:facet name="statusbar"/>
                     <af:table value="#{bindings.Employees2.collectionModel}" var="row"
                               rows="#{bindings.Employees2.rangeSize}"
